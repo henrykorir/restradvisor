@@ -1,0 +1,27 @@
+Components
+1. RatingsFilter
+2. Header
+3. Map
+4. DetailsTab
+5. RestaurantProfile
+6. PostedReview
+7. ReviewForm
+8. Star
+9. StarGroup
+10. App
+
+App
+├──────Header
+│	   └───RatingsFilter
+├──────Map
+└──────DetailsTab
+	   ├──────RestaurantProfile
+	   │	  └───StarGroup
+	   │          └───Star
+	   ├──────PostedReview
+	   │	  └───StarGroup
+	   │          └───Star
+	   └──────ReviewForm
+	    	  └───StarGroupll
+	              └───Star
+
