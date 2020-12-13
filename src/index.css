@@ -1,2 +1,15 @@
+/*
 body {
+	color:#404040;
+	font:400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+	margin:0;
+	padding:0;
+	-webkit-font-smoothing:antialiased;
 }
+
+* {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+*/

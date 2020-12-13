@@ -1,0 +1,34 @@
+[
+   {
+      "restaurantName":"Bronco",
+      "address":"39 Rue des Petites Écuries, 75010 Paris",
+      "lat":-1.2966960600647042,
+      "long":36.87340265350858,
+      "ratings":[
+         {
+            "stars":4,
+            "comment":"Great! But not many veggie options."
+         },
+         {
+            "stars":5,
+            "comment":"My favorite restaurant!"
+         }
+      ]
+   },
+   {
+      "restaurantName":"Babalou",
+      "address":"4 Rue Lamarck, 75018 Paris",
+      "lat":-1.296352825205858,
+      "long":36.80473810272804,
+      "ratings":[
+         {
+            "stars":5,
+            "comment":"Tiny pizzeria next to Sacre Coeur!"
+         },
+         {
+            "stars":3,
+            "comment":"Meh, it was fine."
+         }
+      ]
+   }
+]

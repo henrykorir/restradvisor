@@ -1,13 +1,17 @@
-import logo from './logo.svg';
+import React from 'react';
+import Header from './components/Header';
+import Map from './components/Map';
+import DetailsTab from './components/DetailsTab';
 import './App.css';
-//Terrible, Poor, Average, Good, Excellent
+import data from './database/data.json';
+//https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=36.8377856,-1.2681216&radius=1500&type=restaurant&key=AIzaSyAc4BNBe7d1RKp4fHs1NSt3mc2DD4Z89jU
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
+    <div>
+		<Header />
+		<Map data = {data}  />
+		<DetailsTab />
     </div>
   );
 }
-
 export default App;
