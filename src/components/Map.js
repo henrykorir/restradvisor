@@ -31,6 +31,7 @@ class Map extends React.Component {
 						.addTo(this);
 				});
 			})
+			.addControl(new mapboxgl.NavigationControl(), 'top-left')
 			.on('click', (e)=>{
 				console.log('A click event has occurred at ' + e.lngLat);
 			});

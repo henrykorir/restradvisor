@@ -1,33 +1,157 @@
 [
    {
-      "restaurantName":"Bronco",
-      "address":"39 Rue des Petites Écuries, 75010 Paris",
-      "lat":-1.2966960600647042,
-      "long":36.87340265350858,
+      "restaurantName":"The Lord Erroll",
+      "address":"89 Ruaka Road Runda Estate, Nairobi Kenya",
+      "lat":-1.221926,
+      "long":36.81405,
       "ratings":[
          {
             "stars":4,
-            "comment":"Great! But not many veggie options."
+            "comment":"...a very delayed review... Great service. Attention to detail. Great meals. A bit pricey, but good for a family outing. They had a lovely 2-man band in the garden and it made a pleasant ambience all around. Staff sang with much gusto at our table for my birthday It was quiet due to recent flooding, but I reckon the damages have now been resolved. Would definitely visit again. Thanx for having us Lord Erroll "
          },
          {
             "stars":5,
-            "comment":"My favorite restaurant!"
+            "comment":"Elegant, comfortable, vintage twist of the early 1900s, cosy bar, beautiful terrace and garden for dining, separate rooms for business meetings, excellent service and food, friendly staff! Had several business breakfasts, impeccably arranges and served. Enjoyed lunches and dinners with friends! My favorite was the Moroccan dinner before Christmas last year! But all meals are excellent! Just love the place and my Romanian friends got really found if Lord Erroll too highly recommend the experience if you are in Nairobi!"
+         },
+		 {
+            "stars":5,
+            "comment":"Excellent services and thank you for making my birthday with my boyfriend a successful evening. We felt the love and we appreciate it.The ambiance, soft piano music and lit candles set the mood and made us have a relaxed dinner as we were celebrating our new added years. God bless you all.Served by the amazing Nduta, we appreciate. \nDefinately recommend and will visit again."
+         }
+	  ]
+   },
+   {
+      "restaurantName":"Hashmi Barbeque",
+      "address":"4th Parklands Road Diamond Plaza 2, Nairobi 47227 Kenya",
+      "lat":-1.258809,
+      "long":36.80497,
+      "ratings":[
+         {
+            "stars":5,
+            "comment":"Hashmi has retained that same fantastic mouth watering flavour in their chicken tikka's since way back even after locations changes over the years. The naan is also super soft. Only drawback would be the foul smelling glasses at the restaurant which does need attention."
+         },
+         {
+            "stars":1,
+            "comment":"A very poor experience. Ordered a take away. Arrived over an hour later, cold and was the wrong order. Portion size were surprising small. Customer service was a big zero! I have historically been a fan of Hashmi but going forward... success has lead to poor service and irresponsible service and poor quality."
+         },
+		 {
+            "stars":4,
+            "comment":"Favourite restaurant of my son in Nairobi. Good portions. Not just a meat restaurant (although clearly the tandoor grills are their speciality) as the fish and paneer tika are also excellent."
+         },
+		 {
+            "stars":3,
+            "comment":"Good taste in food but ran out of Chooza chicken. This is unacceptable for a busy restaurant like this."
          }
       ]
    },
    {
-      "restaurantName":"Babalou",
-      "address":"4 Rue Lamarck, 75018 Paris",
-      "lat":-1.296352825205858,
-      "long":36.80473810272804,
+      "restaurantName":"The Talisman Restaurant",
+      "address":"320 Ngong Road Karen, Nairobi Kenya",
+      "lat":-1.322988,
+      "long":36.703365,
       "ratings":[
          {
             "stars":5,
-            "comment":"Tiny pizzeria next to Sacre Coeur!"
+            "comment":"every meal here has been excellent, as is the customer service always. can get busy at the weekends so ensure to book ahead"
          },
          {
-            "stars":3,
-            "comment":"Meh, it was fine."
+            "stars":5,
+            "comment":"Very pleasant experience sitting in the garden or patio. The menu is a bit too eclectic for my taste, they offer everything from Spanish, Indian, Thai, Italian even Japanese, but I stuck to the classics and they were very good quality. The service except for the lacklustre hostess was excellent."
+         },
+		 {
+            "stars":5,
+            "comment":"Best evening meal in all of Nairobi. Great choice, great venue and fantastic service. Good little bar to have a beer and the open air dining is a wonderful setting."
+         },
+		 {
+            "stars":5,
+            "comment":"This place is stunning and very romantic! The food was great and the service was impeccable. Not to be missed when in Nairobi!"
+         },
+		 {
+            "stars":5,
+            "comment":"You guys are just the best!!! i real enjoy the salad. Everything was cool. Wonderful salad with all my favs! Nice ambiance, excellent service... Great place to have a drink as well."
+         },
+		 {
+            "stars":5,
+            "comment":"If you are looking for a great quality restaurant that has great service, delicious food, and a well put ambiance; Talisman is the place to be.I ordered the fillet steak and it was cooked to perfection - Compliments to the Chef! I understand why all my local friends RAVE about this place. great place to eat after an all day event at the Nairobi National Park"
+         },
+		 {
+            "stars":5,
+            "comment":"If you are looking for a great quality restaurant that has great service, delicious food, and a well put ambiance; Talisman is the place to be.I ordered the fillet steak and it was cooked to perfection - Compliments to the Chef! I understand why all my local friends RAVE about this place. great place to eat after an all day event at the Nairobi National Park"
+         },
+		 {
+            "stars":5,
+            "comment":"If you are looking for a great quality restaurant that has great service, delicious food, and a well put ambiance; Talisman is the place to be.I ordered the fillet steak and it was cooked to perfection - Compliments to the Chef! I understand why all my local friends RAVE about this place. great place to eat after an all day event at the Nairobi National Park"
+         },
+		 {
+            "stars":5,
+            "comment":"If you are looking for a great quality restaurant that has great service, delicious food, and a well put ambiance; Talisman is the place to be.I ordered the fillet steak and it was cooked to perfection - Compliments to the Chef! I understand why all my local friends RAVE about this place. great place to eat after an all day event at the Nairobi National Park"
+         },
+		 {
+            "stars":5,
+            "comment":"If you are looking for a great quality restaurant that has great service, delicious food, and a well put ambiance; Talisman is the place to be.I ordered the fillet steak and it was cooked to perfection - Compliments to the Chef! I understand why all my local friends RAVE about this place. great place to eat after an all day event at the Nairobi National Park"
+         }
+      ]
+   },
+   {
+      "restaurantName":"Kulan Cafe",
+      "address":"Kaunda Street 1st floor Jubilee Exchange Building, Nairobi 00100 Kenya",
+      "lat":-1.285712,
+      "long":36.82179,
+      "ratings":[
+         {
+            "stars":5,
+            "comment":"every meal here has been excellent, as is the customer service always. can get busy at the weekends so ensure to book ahead"
+         },
+         {
+            "stars":5,
+            "comment":"Very pleasant experience sitting in the garden or patio. The menu is a bit too eclectic for my taste, they offer everything from Spanish, Indian, Thai, Italian even Japanese, but I stuck to the classics and they were very good quality. The service except for the lacklustre hostess was excellent."
+         },
+		 {
+            "stars":5,
+            "comment":"Best evening meal in all of Nairobi. Great choice, great venue and fantastic service. Good little bar to have a beer and the open air dining is a wonderful setting."
+         },
+		 {
+            "stars":5,
+            "comment":"This place is stunning and very romantic! The food was great and the service was impeccable. Not to be missed when in Nairobi!"
+         },
+		 {
+            "stars":5,
+            "comment":"You guys are just the best!!! i real enjoy the salad. Everything was cool. Wonderful salad with all my favs! Nice ambiance, excellent service... Great place to have a drink as well."
+         },
+		 {
+            "stars":5,
+            "comment":"If you are looking for a great quality restaurant that has great service, delicious food, and a well put ambiance; Talisman is the place to be.I ordered the fillet steak and it was cooked to perfection - Compliments to the Chef! I understand why all my local friends RAVE about this place. great place to eat after an all day event at the Nairobi National Park"
+         }
+      ]
+   },
+   {
+      "restaurantName":"CJ's",
+      "address":"Junction of Kionange & Biashara Streets and The Village Market CJ's Building, Nairobi 00100 Kenya",
+      "lat":-1.283179,
+      "long":36.818413,
+      "ratings":[
+         {
+            "stars":5,
+            "comment":"every meal here has been excellent, as is the customer service always. can get busy at the weekends so ensure to book ahead"
+         },
+         {
+            "stars":5,
+            "comment":"Very pleasant experience sitting in the garden or patio. The menu is a bit too eclectic for my taste, they offer everything from Spanish, Indian, Thai, Italian even Japanese, but I stuck to the classics and they were very good quality. The service except for the lacklustre hostess was excellent."
+         },
+		 {
+            "stars":5,
+            "comment":"Best evening meal in all of Nairobi. Great choice, great venue and fantastic service. Good little bar to have a beer and the open air dining is a wonderful setting."
+         },
+		 {
+            "stars":5,
+            "comment":"This place is stunning and very romantic! The food was great and the service was impeccable. Not to be missed when in Nairobi!"
+         },
+		 {
+            "stars":5,
+            "comment":"You guys are just the best!!! i real enjoy the salad. Everything was cool. Wonderful salad with all my favs! Nice ambiance, excellent service... Great place to have a drink as well."
+         },
+		 {
+            "stars":5,
+            "comment":"If you are looking for a great quality restaurant that has great service, delicious food, and a well put ambiance; Talisman is the place to be.I ordered the fillet steak and it was cooked to perfection - Compliments to the Chef! I understand why all my local friends RAVE about this place. great place to eat after an all day event at the Nairobi National Park"
          }
       ]
    }

@@ -2,9 +2,7 @@ import React from 'react';
 class Star extends React.Component{
 	render(){
 		return(
-			<div>
-				
-			</div>
+			<i className={ "fa fa-star " + this.props.status } ></i>
 		);
 	}
 }

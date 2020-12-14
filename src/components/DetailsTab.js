@@ -19,7 +19,14 @@ class DetailsTab extends React.Component{
 		let tab;
 		switch(this.state.status){
 			case 1:
-				tab = <RestaurantProfile onClick={this.handleClick}/>;
+				tab = <ul>
+						{
+							this.props.data.map((info,i) =>
+								<RestaurantProfile key={i.toString()} record = {info} onClick={this.handleClick}/>
+							)
+						}
+					</ul>;
+				 
 				break;
 			case 2:
 				tab = <PostedReview onClick={this.handleClick}/>;

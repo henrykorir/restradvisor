@@ -1,5 +1,6 @@
 import React from 'react';
 import StarGroup from '../components/StarGroup';
+import RestaurantProfile from '../components/RestaurantProfile';
 
 class PostedReview extends React.Component{
 	constructor(props){

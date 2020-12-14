@@ -3,10 +3,15 @@ import Star from '../components/Star';
 
 class StarGroup extends React.Component{
 	render(){
+		console.log(this.props.ratings);
 		return(
-			<div>
+			<span>
+				<Star status="checked" />
+				<Star status="checked" />
 				<Star />
-			</div>
+				<Star />
+				<Star />
+			</span>
 		);
 	}
 }
