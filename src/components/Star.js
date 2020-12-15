@@ -1,8 +1,9 @@
 import React from 'react';
 class Star extends React.Component{
 	render(){
+		const style = "fa fa-star " + this.props.status;
 		return(
-			<i className={ "fa fa-star " + this.props.status } ></i>
+			<i className= {style} ></i>
 		);
 	}
 }

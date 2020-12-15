@@ -83,6 +83,10 @@ ul{
 	margin: auto;
 	padding: none;
 }
+li{
+	text-decoration:none;
+	list-style: none;
+}
 .profile{
 	display: block;
 	border: 1px solid #dde0e3;
@@ -91,8 +95,6 @@ ul{
 	margin: .5em;
 	cursor: pointer;
 	box-shadow: 0 0 1.25rem 0.25rem rgba(22,25,43,.1);
-	text-decoration:none;
-	list-style: none;
 	
 }
 .slider{

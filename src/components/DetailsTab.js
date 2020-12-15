@@ -7,29 +7,28 @@ class DetailsTab extends React.Component{
 		super(props);
 		this.state = {
 			status: 1,
+			record: props.data[0],
 		}
 		this.handleClick = this.handleClick.bind(this);
 	}
-	handleClick(choice){
+	handleClick(info){
 		this.setState((state) =>{
-			return { status: choice };
+			return { status: info.choice, record: info.record };
 		});
 	}
 	render(){
 		let tab;
 		switch(this.state.status){
 			case 1:
-				tab = <ul>
-						{
-							this.props.data.map((info,i) =>
-								<RestaurantProfile key={i.toString()} record = {info} onClick={this.handleClick}/>
-							)
-						}
-					</ul>;
-				 
+				tab = this.props.data.map((info,i) =>
+						<li key={i.toString()}>
+							<RestaurantProfile record = {info} onClick={this.handleClick}/>
+						</li>
+					)
+				tab = <ul>{tab}</ul>;
 				break;
 			case 2:
-				tab = <PostedReview onClick={this.handleClick}/>;
+				tab = <PostedReview record={this.state.record} onClick={this.handleClick}/>;
 				break;
 			case 3:
 				tab = <ReviewForm onClick ={this.handleClick}/>;

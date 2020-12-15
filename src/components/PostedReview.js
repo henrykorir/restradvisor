@@ -8,12 +8,21 @@ class PostedReview extends React.Component{
 		this.handleClick = this.handleClick.bind(this);
 	}
 	handleClick(e){
-		this.props.onClick(1);
+		this.props.onClick({choice: 1, record: this.props.record});
 	}
 	render(){
+		const reviews = this.props.record.ratings.map((review, i) =>
+			<li key ={i.toString()}>
+				<StarGroup stars={review.stars}/>
+				<p>{review.comment}</p>
+			</li>
+		);
 		return(
-			<div onClick={this.handleClick}>
-				<h1>Review</h1>
+			<div>
+				<RestaurantProfile record={this.props.record} onClick = {this.handleClick}/>
+				<ul>
+					{reviews}
+				</ul>
 			</div>
 		);
 	}

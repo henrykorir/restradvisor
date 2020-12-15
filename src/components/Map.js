@@ -4,6 +4,7 @@ import mapboxgl from 'mapbox-gl';
 mapboxgl.accessToken = 'pk.eyJ1IjoiaGVucnlrb3JpciIsImEiOiJja2lpaWJybTMyNXRhMnhvNTJkZGkwdHVuIn0.vGU67gSoCtqbxrV6kudGcw';
 class Map extends React.Component {
 	componentDidMount(){
+		console.log(this.props.here);
 		let data = this.props.data;
 		function onSuccess(position){
 			new mapboxgl.Map({
@@ -34,7 +35,9 @@ class Map extends React.Component {
 			.addControl(new mapboxgl.NavigationControl(), 'top-left')
 			.on('click', (e)=>{
 				console.log('A click event has occurred at ' + e.lngLat);
-			});
+			})
+			.flyTo({center:[this.props.here.lng, this.props.here.lat],zoom: 15});
+			return [position.coords.longitude, position.coords.latitude];
 		}
 		function onError(positionError)  {
 			if(positionError.code === 1) { // PERMISSION_DENIED
@@ -50,7 +53,8 @@ class Map extends React.Component {
 			timeout: Infinity,
 			maximumAge: 0
 		};
-		navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
+		let coords=navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
+		console.log(coords);
 		
 	}
 	render() {

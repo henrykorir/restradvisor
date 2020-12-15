@@ -3,14 +3,19 @@ import Star from '../components/Star';
 
 class StarGroup extends React.Component{
 	render(){
-		console.log(this.props.ratings);
+		const stars = [];
+		let i = 1;
+		for(;i<= this.props.stars; i++){
+			stars.push(<Star key = {i.toString()} status="checked" />);
+		}
+		if(this.props.stars < 5){
+			for(;i<= 5; i++){
+				stars.push(<Star key = {i.toString()} />);
+			}
+		}
 		return(
 			<span>
-				<Star status="checked" />
-				<Star status="checked" />
-				<Star />
-				<Star />
-				<Star />
+				{ stars }
 			</span>
 		);
 	}
