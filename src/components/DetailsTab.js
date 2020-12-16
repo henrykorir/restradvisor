@@ -15,6 +15,7 @@ class DetailsTab extends React.Component{
 		this.setState((state) =>{
 			return { status: info.choice, record: info.record };
 		});
+		this.props.onShowHere({lat: info.record.lat, lng: info.record.long});
 	}
 	render(){
 		let tab;
