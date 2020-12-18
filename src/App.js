@@ -2,21 +2,16 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import Map from './components/Map';
 import DetailsTab from './components/DetailsTab';
-import {location as Here} from './helper/Geolocation';
-
+import location from './helper/Geolocation';
 import data from './database/data.json';
 import './App.css';
-//https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=36.8377856,-1.2681216&radius=1500&type=restaurant&key=AIzaSyAc4BNBe7d1RKp4fHs1NSt3mc2DD4Z89jU
+//https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=36.8377856,-1.2681216&radius=1500&type=restaurant&key=
 
-		
 function App() {
-	console.log(process);
-	const [here, setHere] = useState(Here.lnglat);
-	
+	const [here, setHere] = useState({lng: 0, lat: 0});
 	const changeLocation = (coords) => {
         setHere(coords);
     };
-	
 	return (
 		<div>
 			<Header />

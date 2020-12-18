@@ -1,12 +1,15 @@
+
 class Geolocation{
 	constructor(){
-		this.lnglat = {lat: 0, lng: 0};
+		this._lnglat = {lat: 0, lng: 0};
 		this.onSuccess = this.onSuccess.bind(this);
 		this.onError = this.onError.bind(this);
 		this.init();
 	}
 	onSuccess(position){
-		this.lnglat = {lat: position.coords.latitude, lng: position.coords.longitude};
+		this._lnglat.lat = position.coords.latitude;
+		this._lnglat.lng = position.coords.longitude;
+		//console.log(s);
 	}
 	onError(positionError)  {
 		if(positionError.code === 1) { // PERMISSION_DENIED
@@ -18,20 +21,24 @@ class Geolocation{
 		}
 	}
 	init(){
+		let s = "me";
 		navigator.geolocation.getCurrentPosition(this.onSuccess, this.onError, {
 			enableHighAccuracy: true,
 			timeout: Infinity,
 			maximumAge: 0
 		});
+		return this;
 	}
-	set lnglat(pos){
-		this._lnglat = pos;
+	set lnglat(lnglat){
+		this._lnglat= lnglat;
 	}
 	get lnglat(){
-		//console.log(this.lnglat);
 		return this._lnglat;
 	}
 	
+	
 }
 const location = new Geolocation();
-export  {location};
+console.log("new=",location.lnglat);
+export  default location;
+
