@@ -1,6 +1,6 @@
 import React from 'react';
 import mapboxgl from 'mapbox-gl';
-
+//https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-1.2713984,36.8345088&radius=500&types=food&name=restaurant&key=AIzaSyAc4BNBe7d1RKp4fHs1NSt3mc2DD4Z89jU
 mapboxgl.accessToken = 'pk.eyJ1IjoiaGVucnlrb3JpciIsImEiOiJja2lpaWJybTMyNXRhMnhvNTJkZGkwdHVuIn0.vGU67gSoCtqbxrV6kudGcw';
 class Map extends React.Component {
 	constructor(props){
@@ -20,20 +20,40 @@ class Map extends React.Component {
 		let data = this.props.data;
 		let lat = this.props.here.lat;
 		let lng = this.props.here.lng;
+		console.log(data);
 		const mapbox = new mapboxgl.Map({
 			container: 'mapContainer',
 			style: 'mapbox://styles/mapbox/streets-v11',
-			center: [lng, lat],
-			zoom: 12
+			zoom: 7
 		})
 		.on('load', function(e) {
 			//my location
-			new mapboxgl.Marker({
-				color: "green",
-				draggable: false
-			})
-			.setLngLat([lng, lat])
-			.addTo(this)
+			navigator.geolocation.getCurrentPosition(
+				function onSuccess(position){
+					mapbox.setCenter([position.coords.longitude, position.coords.latitude]);
+					new mapboxgl.Marker({
+						color: "green",
+						draggable: false
+					})
+					.setLngLat([position.coords.longitude, position.coords.latitude])
+					.addTo(mapbox)
+				},
+				function onError(positionError)  {
+					if(positionError.code === 1) { // PERMISSION_DENIED
+					   alert("Error: Permission Denied! " + positionError.message);
+					} else if(positionError.code === 2) { // POSITION_UNAVAILABLE
+					   alert("Error: Position Unavailable! " + positionError.message);
+					} else if(positionError.code === 3) { // TIMEOUT
+					   alert("Error: Timeout!" + positionError.message);
+					}
+				},
+				{
+					enableHighAccuracy: true,
+					timeout: Infinity,
+					maximumAge: 0
+				}
+			);
+			
 			//other places
 			data.forEach((place, i) =>{
 				var el = document.createElement('div')
@@ -46,7 +66,14 @@ class Map extends React.Component {
 		})
 		.addControl(new mapboxgl.NavigationControl(), 'top-left')
 		.on('click', (e)=>{
-			console.log('A click event has occurred at ' + e.lngLat);
+			console.log(e.lngLat);
+			var popup = new mapboxgl.Popup({
+				closeButton: true,
+				closeOnClick: true
+			})
+			.setLngLat( [e.lngLat.lng,  e.lngLat.lat])
+			.setHTML("<p><form><input type=\"text\" /> <input type=\"submit\" /></p>")
+			.addTo(mapbox);;
 		})
 		this.setState((state) =>{
 			return { map: mapbox, };

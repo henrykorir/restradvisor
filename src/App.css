@@ -16,6 +16,15 @@
 .heading h1{
 	text-transform: capitalize;
 }
+.sr-only {
+  position: absolute;
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+}
+label{
+	display: flex;
+	flex-direction: column;
+}
 .mapContainer {
 	position:absolute;
 	right:23.3334%;
@@ -31,6 +40,7 @@
 	overflow:auto;
 	top:60px;right:0;
 	border-right:1px solid rgba(0,0,0,0.25);
+	
 }
 ::-webkit-scrollbar {
     width:5px;
@@ -67,6 +77,15 @@ input[type="submit"]{
 	border-radius: 10px;
 	border: none;
 }
+input[type='range'] {
+  grid-column: 2;
+  grid-row: 2;
+  place-self: center;
+  /*width: var(--track-w);*/
+  pointer-events: auto;
+  cursor: pointer;
+}
+
 textarea{
 	width: 100%;
 }
@@ -87,6 +106,18 @@ li{
 	text-decoration:none;
 	list-style: none;
 }
+datalist {
+  display: grid;
+  grid-auto-flow: column;
+  grid-row: 2;
+  place-self: start stretch;
+}
+option {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
 .profile{
 	display: block;
 	border: 1px solid #dde0e3;
@@ -98,8 +129,13 @@ li{
 	
 }
 .slider{
+	z-index: 5;
 	background: #c4c4c4;
+	width: 12em;
+	margin-bottom: 0;
+	margin-top: 0;
 }
+
 .checked {
   color: #098015;
 }

@@ -1,0 +1,781 @@
+{
+   "html_attributions" : [],
+   "next_page_token" : "ATtYBwJEFbD1MgaKjZfuv-MyHsDAp1UYXNAJRtjNxaR4eebkpZCWB_y9tyQq8wZZ3-Q_a3Ej7Vfm23vVqH2jThQRQAqkCLJaPxPdxMbBhgFzTd4dH--Kr2WBCt9olMycwBI4JSxKMmyXfoZk0gDij9miyz1wSOpBTrUZaZ1P36N9a5hg9ft1Rrs0TQ0IPaZtE_RKTDa7d8u5Htl6ZTQafoLmkaCECSU2U1OWXXfcMyL5hPGS01C8CcOk3armajZQfZMjYHG6aP3vkrh8Qw7ShRsdnMw98grgbxMoq_7jUqlNsOW8xX3DqbL3Y6ppqrzdNEAxqH-g6K9inr-3cnurCuwge06ofLu_DiPnzk968Xd8dNEvONu6DqbOLsbxob5rj6QoYROiOaSIAXmo3b58oMYXqJ5WImTc1gCd5WLel6qf5I_e66IZnDPjNaXjE89Z",
+   "results" : [
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : -1.271029,
+               "lng" : 36.833327
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -1.269747170107278,
+                  "lng" : 36.83465842989272
+               },
+               "southwest" : {
+                  "lat" : -1.272446829892722,
+                  "lng" : 36.83195877010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+         "name" : "Silent Bar & Restaurant",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "photos" : [
+            {
+               "height" : 1920,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/111620653224627657225\"\u003eA Google User\u003c/a\u003e"
+               ],
+               "photo_reference" : "ATtYBwJCa_dzaMhHMZ9phIdKYCXDgm8yE1GBvU2UlKq5iutUw9TJ6j8dajRis7Zw56_mlycJPjMyXz-BBw6f9PZpyu8bxMI23gnRyVMSbyJhpUw4BhKJvSkHbIil3DVb0JwhNA-3XorBf1OuDDS-ejVpirvBnTlsOFzhDsM-4a1i4q4KT8RW",
+               "width" : 1080
+            }
+         ],
+         "place_id" : "ChIJe4_-6UMXLxgREPjjkPyVnkQ",
+         "plus_code" : {
+            "compound_code" : "PRHM+H8 Nairobi",
+            "global_code" : "6GCRPRHM+H8"
+         },
+         "rating" : 4,
+         "reference" : "ChIJe4_-6UMXLxgREPjjkPyVnkQ",
+         "scope" : "GOOGLE",
+         "types" : [ "restaurant", "food", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 44,
+         "vicinity" : "Starehe"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : -1.2726725,
+               "lng" : 36.8350543
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -1.271279370107278,
+                  "lng" : 36.83625067989272
+               },
+               "southwest" : {
+                  "lat" : -1.273979029892722,
+                  "lng" : 36.83355102010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+         "name" : "Magie Shisha & Restaurant",
+         "photos" : [
+            {
+               "height" : 2576,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/105194486037144983113\"\u003eJohn Mutiso\u003c/a\u003e"
+               ],
+               "photo_reference" : "ATtYBwKwd68cyCfrxDHFjaNlewiYtgbtYROs5BYBiWkMEwdqHCcxCZUaANbNevdKKkPDD3kPoePSYUZ3G96oHDINAf09VMJIQI7uTpkkOmqwSNEDb1lBhZ_4cuc3tMQgEAvoei0SVF_HcKmB602eZn6FancA_2NdJvvz6-7EMMUrij2hcd0W",
+               "width" : 1932
+            }
+         ],
+         "place_id" : "ChIJXU9BPdAWLxgRpAa_cXyrKFk",
+         "plus_code" : {
+            "compound_code" : "PRGP+W2 Nairobi",
+            "global_code" : "6GCRPRGP+W2"
+         },
+         "rating" : 4.9,
+         "reference" : "ChIJXU9BPdAWLxgRpAa_cXyrKFk",
+         "scope" : "GOOGLE",
+         "types" : [ "restaurant", "food", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 7,
+         "vicinity" : "Oppposite Pumwani Secondary School Playing Ground, Losai Rd, Nairobi"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : -1.2735487,
+               "lng" : 36.8319674
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -1.272178220107278,
+                  "lng" : 36.83324017989271
+               },
+               "southwest" : {
+                  "lat" : -1.274877879892722,
+                  "lng" : 36.83054052010727
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+         "name" : "Safe Lodge Family Restaurant",
+         "place_id" : "ChIJAXyl4dAWLxgR6C4ZwAcFxzo",
+         "plus_code" : {
+            "compound_code" : "PRGJ+HQ Nairobi",
+            "global_code" : "6GCRPRGJ+HQ"
+         },
+         "rating" : 3,
+         "reference" : "ChIJAXyl4dAWLxgR6C4ZwAcFxzo",
+         "scope" : "GOOGLE",
+         "types" : [ "restaurant", "food", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1,
+         "vicinity" : "Park Rd, Nairobi"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : -1.2695385,
+               "lng" : 36.8344223
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -1.268365270107278,
+                  "lng" : 36.83572447989273
+               },
+               "southwest" : {
+                  "lat" : -1.271064929892722,
+                  "lng" : 36.83302482010729
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+         "name" : "Bandaz Restaurant",
+         "place_id" : "ChIJEf7gH9sWLxgRJ7nGCBkuBOA",
+         "plus_code" : {
+            "compound_code" : "PRJM+5Q Nairobi",
+            "global_code" : "6GCRPRJM+5Q"
+         },
+         "rating" : 2,
+         "reference" : "ChIJEf7gH9sWLxgRJ7nGCBkuBOA",
+         "scope" : "GOOGLE",
+         "types" : [ "restaurant", "food", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1,
+         "vicinity" : "Juja Rd, Nairobi City"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : -1.269501,
+               "lng" : 36.839279
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -1.268214570107278,
+                  "lng" : 36.84064437989272
+               },
+               "southwest" : {
+                  "lat" : -1.270914229892722,
+                  "lng" : 36.83794472010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+         "name" : "Olympia Restaurant",
+         "photos" : [
+            {
+               "height" : 3000,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/104095401322786241202\"\u003eEmiel Spiessens\u003c/a\u003e"
+               ],
+               "photo_reference" : "ATtYBwLg5a1IoACmhcaIuz9IjwJ8bfKoIIgXKFxbRy-WfsB9TY35t9L6En8iJWGibiwCRMbeTvWqURnWmczUQbHaRvCyUqAFQtod5cvFFtB3mJu1_mOeFQafRyX-iZgPBoJJwrctKiiheeqbkR8pP-7Om_swhccJQwBnAjY6Ggx7QmxaMyLk",
+               "width" : 4000
+            }
+         ],
+         "place_id" : "ChIJw7eRTcQWLxgRGbosmHmPx3M",
+         "plus_code" : {
+            "compound_code" : "PRJQ+5P Nairobi",
+            "global_code" : "6GCRPRJQ+5P"
+         },
+         "rating" : 4.3,
+         "reference" : "ChIJw7eRTcQWLxgRGbosmHmPx3M",
+         "scope" : "GOOGLE",
+         "types" : [ "restaurant", "food", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 59,
+         "vicinity" : "Juja Rd, Nairobi"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : -1.2725242,
+               "lng" : 36.8331638
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -1.271099170107278,
+                  "lng" : 36.83453707989272
+               },
+               "southwest" : {
+                  "lat" : -1.273798829892722,
+                  "lng" : 36.83183742010727
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+         "name" : "Kawaba Bar & Restaurant",
+         "place_id" : "ChIJNY2MYdAWLxgR8ae8b2OGa0k",
+         "plus_code" : {
+            "compound_code" : "PRGM+X7 Nairobi",
+            "global_code" : "6GCRPRGM+X7"
+         },
+         "rating" : 2,
+         "reference" : "ChIJNY2MYdAWLxgR8ae8b2OGa0k",
+         "scope" : "GOOGLE",
+         "types" : [ "bar", "restaurant", "food", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1,
+         "vicinity" : "Mogira Rd, Nairobi"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : -1.269738,
+               "lng" : 36.839445
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -1.268320620107278,
+                  "lng" : 36.84077827989272
+               },
+               "southwest" : {
+                  "lat" : -1.271020279892722,
+                  "lng" : 36.83807862010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+         "name" : "Asmara Bar & Restaurant – Pangani",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "photos" : [
+            {
+               "height" : 3024,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/104762767988100967672\"\u003eFatma Abujabal\u003c/a\u003e"
+               ],
+               "photo_reference" : "ATtYBwJ1CeSUuCYwjJjkeirswCm9H5pjrh5zg4TrJbieLGJ-BSrnrBQfKRwFjCkdHqUM5uTKWrh1O8XPBxhSgMgAOSqeGAPg4VZLIVS-gzbXFbjElRLvzE8Sv_rCVo2SKPOCtYk34sbwxONh8-gg1AamZmQpJjBfMLFlPAxPJ4_C5noPD8EA",
+               "width" : 4032
+            }
+         ],
+         "place_id" : "ChIJAdJLiscXLxgRIf8MY1AlJBc",
+         "plus_code" : {
+            "compound_code" : "PRJQ+4Q Nairobi",
+            "global_code" : "6GCRPRJQ+4Q"
+         },
+         "rating" : 4.2,
+         "reference" : "ChIJAdJLiscXLxgRIf8MY1AlJBc",
+         "scope" : "GOOGLE",
+         "types" : [ "restaurant", "food", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1315,
+         "vicinity" : "Juja Rd, Nairobi"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : -1.2697103,
+               "lng" : 36.8330603
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -1.268364020107278,
+                  "lng" : 36.83427467989272
+               },
+               "southwest" : {
+                  "lat" : -1.271063679892722,
+                  "lng" : 36.83157502010727
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+         "name" : "Mohindar's Corner Bar & Restraunt",
+         "photos" : [
+            {
+               "height" : 480,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/105509754551974491003\"\u003eVincent Lusige\u003c/a\u003e"
+               ],
+               "photo_reference" : "ATtYBwI53l2Vqe5pFfZFVwNYEBJSMlNUH5bB1iOY6zUyHRYnm3Z5tN62Eodmi29FSDqG_20ve008dwdrQ1r-QEp0cx5YsuX_XqnQrG3uZ4Rja3XJnRcitCwiAhe7btO6MyAtGEHfPbDfV_ENCylXa8tfqPkWjyVWuOfJ1gRYA5owaoyrsaMB",
+               "width" : 640
+            }
+         ],
+         "place_id" : "ChIJ7xc9q9sWLxgRyInlw_c1C88",
+         "plus_code" : {
+            "compound_code" : "PRJM+46 Nairobi",
+            "global_code" : "6GCRPRJM+46"
+         },
+         "rating" : 4.9,
+         "reference" : "ChIJ7xc9q9sWLxgRyInlw_c1C88",
+         "scope" : "GOOGLE",
+         "types" : [ "bar", "restaurant", "food", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 8,
+         "vicinity" : "Opposite Guru Nanak Hospital, Park Rd, Nairobi"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : -1.2668222,
+               "lng" : 36.8366042
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -1.265454770107278,
+                  "lng" : 36.83791702989271
+               },
+               "southwest" : {
+                  "lat" : -1.268154429892722,
+                  "lng" : 36.83521737010727
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+         "name" : "Cinnamon Cafe And Restaurant",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3120,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/103143993715130953925\"\u003eCharles Macharia\u003c/a\u003e"
+               ],
+               "photo_reference" : "ATtYBwJI704qmP6V4NJirPSrgP2yrJXaLZhuTZjXuRV50ve-oIULwai9AOx8ukxsRM0dWHs-w4y-PQHuYQIMABexV5E8GX-Uq9jIo-TBtb-mQxNoiXB1sTGxKfzV6KjW8PYXcEFg9pjWJ8wV6mtY-6K3diIPZXe6dRxFQ1AuFVE7BGR8_5aV",
+               "width" : 4160
+            }
+         ],
+         "place_id" : "ChIJmRlhQ8MWLxgRDYux2D8ZBnc",
+         "plus_code" : {
+            "compound_code" : "PRMP+7J Nairobi",
+            "global_code" : "6GCRPRMP+7J"
+         },
+         "rating" : 3.5,
+         "reference" : "ChIJmRlhQ8MWLxgRDYux2D8ZBnc",
+         "scope" : "GOOGLE",
+         "types" : [ "restaurant", "food", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 4,
+         "vicinity" : "Pangani, Nairobi"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : -1.2659731,
+               "lng" : 36.8377515
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -1.264591570107278,
+                  "lng" : 36.83911707989272
+               },
+               "southwest" : {
+                  "lat" : -1.267291229892722,
+                  "lng" : 36.83641742010727
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+         "name" : "Cornerstone Restaurant",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "photos" : [
+            {
+               "height" : 2448,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/101785252412544227395\"\u003eqadar filqe\u003c/a\u003e"
+               ],
+               "photo_reference" : "ATtYBwIpyzZGlChzXBBU5Aqq-obzT2p6hkcgHpKTv_Oyewb1V6p_5DzM3u1Ne-zeJ8tR6of53WdgZ515KKdVmzAj-B38S_DxpLNE_wUGe5l767vXaF_9tnS5TBo1PpxqxX99sN6wBi0NC1fz-b3Tt5ufHlmZ0Hs0jMQR_HG_RV32aPsgfR8a",
+               "width" : 3264
+            }
+         ],
+         "place_id" : "ChIJr3DQHMMWLxgRu7vpbi4GUEY",
+         "plus_code" : {
+            "compound_code" : "PRMQ+J4 Nairobi",
+            "global_code" : "6GCRPRMQ+J4"
+         },
+         "price_level" : 2,
+         "rating" : 4,
+         "reference" : "ChIJr3DQHMMWLxgRu7vpbi4GUEY",
+         "scope" : "GOOGLE",
+         "types" : [ "restaurant", "food", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 73,
+         "vicinity" : "Nairobi"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : -1.2727382,
+               "lng" : 36.8333145
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -1.271396220107278,
+                  "lng" : 36.83471102989272
+               },
+               "southwest" : {
+                  "lat" : -1.274095879892722,
+                  "lng" : 36.83201137010727
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+         "name" : "Printers Pub & Restaurant",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "place_id" : "ChIJe3BFXtAWLxgR1GTN_wmyV_o",
+         "plus_code" : {
+            "compound_code" : "PRGM+W8 Nairobi",
+            "global_code" : "6GCRPRGM+W8"
+         },
+         "rating" : 3,
+         "reference" : "ChIJe3BFXtAWLxgR1GTN_wmyV_o",
+         "scope" : "GOOGLE",
+         "types" : [ "bar", "restaurant", "food", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 9,
+         "vicinity" : "Opposite Round About, Rescue Dada Centre, Mogira Rd, Nairobi"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : -1.275,
+               "lng" : 36.832635
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -1.273650170107278,
+                  "lng" : 36.83398482989272
+               },
+               "southwest" : {
+                  "lat" : -1.276349829892722,
+                  "lng" : 36.83128517010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+         "name" : "Safe Lodge Restaurant",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "place_id" : "ChIJ24M0HtEWLxgRe2zniOkAtTU",
+         "plus_code" : {
+            "compound_code" : "PRFM+X3 Nairobi",
+            "global_code" : "6GCRPRFM+X3"
+         },
+         "rating" : 0,
+         "reference" : "ChIJ24M0HtEWLxgRe2zniOkAtTU",
+         "scope" : "GOOGLE",
+         "types" : [ "restaurant", "food", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 0,
+         "vicinity" : "Kinsasha Rd, Starehe"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : -1.2672524,
+               "lng" : 36.8369128
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -1.265870620107278,
+                  "lng" : 36.83827547989272
+               },
+               "southwest" : {
+                  "lat" : -1.268570279892722,
+                  "lng" : 36.83557582010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+         "name" : "Bin Agil Restaurant",
+         "photos" : [
+            {
+               "height" : 2250,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/116569351975850723234\"\u003ekevin abdallah\u003c/a\u003e"
+               ],
+               "photo_reference" : "ATtYBwL7E0IMuqQ6FxfN0nbjudqO4Gs3WrA4FdkeD0KC5EhsaVja5hrosFeVKLL9P92ZZFdMxa4jhLfJxwLyCTgGRTPRYDqp5piBxF9bPsllupuSQ14VRLc2WRz_8aDTvsV6nHbh5j2RJTdbfhHXrjdOFlMHZ2F2AyYGOiOKF0_fGjuzc62T",
+               "width" : 4000
+            }
+         ],
+         "place_id" : "ChIJ8zM7Q8MWLxgR2lhkc4_Ojdg",
+         "plus_code" : {
+            "compound_code" : "PRMP+3Q Nairobi",
+            "global_code" : "6GCRPRMP+3Q"
+         },
+         "rating" : 3.8,
+         "reference" : "ChIJ8zM7Q8MWLxgR2lhkc4_Ojdg",
+         "scope" : "GOOGLE",
+         "types" : [ "restaurant", "food", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 12,
+         "vicinity" : "Nairobi"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : -1.2663953,
+               "lng" : 36.8372591
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -1.265003170107278,
+                  "lng" : 36.83862737989272
+               },
+               "southwest" : {
+                  "lat" : -1.267702829892722,
+                  "lng" : 36.83592772010727
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+         "name" : "Kapha Restaurant",
+         "place_id" : "ChIJ-3ENFsMWLxgRNMAYs54EwrU",
+         "plus_code" : {
+            "compound_code" : "PRMP+CW Nairobi",
+            "global_code" : "6GCRPRMP+CW"
+         },
+         "rating" : 3.6,
+         "reference" : "ChIJ-3ENFsMWLxgRNMAYs54EwrU",
+         "scope" : "GOOGLE",
+         "types" : [ "restaurant", "food", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 8,
+         "vicinity" : "Miwa Lane, Nairobi"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : -1.2693891,
+               "lng" : 36.8396374
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -1.268114020107278,
+                  "lng" : 36.84100557989272
+               },
+               "southwest" : {
+                  "lat" : -1.270813679892722,
+                  "lng" : 36.83830592010727
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+         "name" : "Disney Bar and Restaurant",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 2048,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/116352143509986093461\"\u003eDisney Bar and Restaurant\u003c/a\u003e"
+               ],
+               "photo_reference" : "ATtYBwKLTsVrlEZ-s23tQED7uqwrMf_Fl2DTYSvK1rdp4aasv0EGNP2HKzsLNQQHbUGPouL9VeFO2F8xoGVkXS2ZtJ8s_MlNv-5T0EsnmGV9agLCs57-74wyBoGIvJa2PUYNk03heM29g2-V19h__DPVpygQKLcHLxOGgiPhSAgjsBX98URQ",
+               "width" : 1536
+            }
+         ],
+         "place_id" : "ChIJITQrTMQWLxgRCeb9qdL8viA",
+         "plus_code" : {
+            "compound_code" : "PRJQ+6V Nairobi",
+            "global_code" : "6GCRPRJQ+6V"
+         },
+         "rating" : 3.6,
+         "reference" : "ChIJITQrTMQWLxgRCeb9qdL8viA",
+         "scope" : "GOOGLE",
+         "types" : [ "restaurant", "food", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 62,
+         "vicinity" : "No. 209/2087, Disney Bar and Restaurant, Juja Road, Nairobi"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : -1.2758603,
+               "lng" : 36.8377148
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -1.274549920107278,
+                  "lng" : 36.83905152989272
+               },
+               "southwest" : {
+                  "lat" : -1.277249579892722,
+                  "lng" : 36.83635187010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+         "name" : "Afrikan Pot Restaurant",
+         "place_id" : "ChIJwaP12s0WLxgRwyD7l6aAOyk",
+         "plus_code" : {
+            "compound_code" : "PRFQ+M3 Nairobi",
+            "global_code" : "6GCRPRFQ+M3"
+         },
+         "rating" : 0,
+         "reference" : "ChIJwaP12s0WLxgRwyD7l6aAOyk",
+         "scope" : "GOOGLE",
+         "types" : [ "restaurant", "food", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 0,
+         "vicinity" : "Nairobi City"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : -1.266415,
+               "lng" : 36.839383
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -1.265208570107278,
+                  "lng" : 36.84073672989273
+               },
+               "southwest" : {
+                  "lat" : -1.267908229892722,
+                  "lng" : 36.83803707010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+         "name" : "New Fountain Rock Bar & Restaurant",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "place_id" : "ChIJY_lxgcMWLxgRo2cbeR9QYdo",
+         "plus_code" : {
+            "compound_code" : "PRMQ+CQ Nairobi",
+            "global_code" : "6GCRPRMQ+CQ"
+         },
+         "rating" : 3.8,
+         "reference" : "ChIJY_lxgcMWLxgRo2cbeR9QYdo",
+         "scope" : "GOOGLE",
+         "types" : [ "restaurant", "bar", "food", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 11,
+         "vicinity" : "Fairview Rd, Nairobi"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : -1.2723813,
+               "lng" : 36.8405488
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -1.271041120107278,
+                  "lng" : 36.84186862989272
+               },
+               "southwest" : {
+                  "lat" : -1.273740779892722,
+                  "lng" : 36.83916897010727
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+         "name" : "UHUD GRILL RESTAURANT",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 440,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/109232092688912373826\"\u003eA Google User\u003c/a\u003e"
+               ],
+               "photo_reference" : "ATtYBwKTo52zJ1kE4WySRMAXUOY-z57MyryL7CTaoiHCEX4wlR38TZgtSU71Bo05TIpCTBDfVp8v9ER-OBuSxYc-q5geqhVbWHaMUzFDMnP8q1_LEd3U3LyvYhA-gVZ0utTqcP8rog1W4bPhxCtdCrGxgKjgmi6j1J0RA3aO0zgmQ7uMqn2w",
+               "width" : 550
+            }
+         ],
+         "place_id" : "ChIJX2SzRIwXLxgRokdVgfbMmLc",
+         "plus_code" : {
+            "compound_code" : "PRHR+26 Nairobi",
+            "global_code" : "6GCRPRHR+26"
+         },
+         "rating" : 4.8,
+         "reference" : "ChIJX2SzRIwXLxgRokdVgfbMmLc",
+         "scope" : "GOOGLE",
+         "types" : [ "restaurant", "food", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 5,
+         "vicinity" : "Mweni Rd, Nairobi"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : -1.2768236,
+               "lng" : 36.8293791
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -1.275508220107278,
+                  "lng" : 36.83073802989272
+               },
+               "southwest" : {
+                  "lat" : -1.278207879892722,
+                  "lng" : 36.82803837010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+         "name" : "Gabis Bar & Restaurant",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "place_id" : "ChIJudn7a9QWLxgR2wetJp3rbS0",
+         "plus_code" : {
+            "compound_code" : "PRFH+7Q Nairobi",
+            "global_code" : "6GCRPRFH+7Q"
+         },
+         "rating" : 4,
+         "reference" : "ChIJudn7a9QWLxgR2wetJp3rbS0",
+         "scope" : "GOOGLE",
+         "types" : [ "bar", "restaurant", "food", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1,
+         "vicinity" : "Opposite Eagle Star Bar, Mwangi Riika Cres, Nairobi"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : -1.2757667,
+               "lng" : 36.8381351
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -1.274367470107278,
+                  "lng" : 36.83950707989273
+               },
+               "southwest" : {
+                  "lat" : -1.277067129892722,
+                  "lng" : 36.83680742010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+         "name" : "Quality Restaurant & Butchery",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "place_id" : "ChIJWwRZ0c0WLxgR-gHcXNMiCPQ",
+         "plus_code" : {
+            "compound_code" : "PRFQ+M7 Nairobi",
+            "global_code" : "6GCRPRFQ+M7"
+         },
+         "rating" : 5,
+         "reference" : "ChIJWwRZ0c0WLxgR-gHcXNMiCPQ",
+         "scope" : "GOOGLE",
+         "types" : [ "restaurant", "food", "point_of_interest", "store", "establishment" ],
+         "user_ratings_total" : 1,
+         "vicinity" : "Kariokor Shopping Centre, Next To New Apartments, General Waruingi St, Nairobi"
+      }
+   ],
+   "status" : "OK"
+}
