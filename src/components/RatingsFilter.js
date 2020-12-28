@@ -13,27 +13,19 @@ class RatingsFilter extends React.Component{
 
 		this.handleChange = this.handleChange.bind(this);
 	}
-	componentDidUpdate(prevProps,prevState) {
-	}
 	componentDidMount(){
 		this.setState({firstValue: this.state.minValue, secondValue: this.state.maxValue});
 	}
 
-	handleChange(name, event){
+	handleChange(event){
 		let value = event.target.value;
 		let value1 = this.state.firstValue;
 		let value2 = this.state.secondValue;
-		if(name === "second"){
-			if(parseInt(this.state.firstValue) <= parseInt(value)){
-				value2 = value;
-			}
-		}
-		else{
-			if(parseInt(value) <= parseInt(this.state.secondValue)){
-				value1 = value;
-			}
-		}
-		console.log("value1=",value1, "value2=",value2);
+		console.log(event.target.id);
+		if(event.target.id === "a")
+			value1 = value;
+		else
+			value2 = value;
 		this.setState(function(state,props){
 			return { secondValue: value2, firstValue: value1 };
 		});
@@ -41,19 +33,16 @@ class RatingsFilter extends React.Component{
 	}
 	render(){
 		return(
-			<div className="slider">
-				<fieldset>
-				<legend>Filter By Rating</legend>
-				<input id="a" type="range" value={this.state.firstValue} min={this.state.minValue} max={this.state.maxValue} step={this.state.step}  list="ratings" onChange={this.handleChange.bind(this, "first")}/>
-				<input id="b" type="range" value={this.state.secondValue} min={this.state.minValue} max={this.state.maxValue} step={this.state.step}  list="ratings" onChange={this.handleChange.bind(this, "second")}/>
-				<datalist id="ratings">
+			<div className="range-slider">
+				<input id="a"  type="range" value={this.state.firstValue} min={this.state.minValue} max={this.state.maxValue} step={this.state.step}  list="ratings" onChange={this.handleChange.bind(this)}/>
+				<input id="b"  type="range" value={this.state.secondValue} min={this.state.minValue} max={this.state.maxValue} step={this.state.step}  list="ratings" onChange={this.handleChange.bind(this)}/>
+				  <datalist id="ratings">
 					<option value="1" label="1">1</option>
 					<option value="2" label="2">2</option>
 					<option value="3" label="3">3</option>
 					<option value="4" label="4">4</option>
 					<option value="5" label="5">5</option>
 				</datalist>
-				</fieldset>
 			</div>
 		);
 	}

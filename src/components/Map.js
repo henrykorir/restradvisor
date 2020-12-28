@@ -20,15 +20,16 @@ class Map extends React.Component {
 		let data = this.props.data;
 		let lat = this.props.here.lat;
 		let lng = this.props.here.lng;
-		console.log(data);
 		const mapbox = new mapboxgl.Map({
+			center: [lng, lat],
 			container: 'mapContainer',
 			style: 'mapbox://styles/mapbox/streets-v11',
-			zoom: 7
+			zoom: 10
 		})
 		.on('load', function(e) {
 			//my location
-			navigator.geolocation.getCurrentPosition(
+			const { geolocation } = navigator;
+			geolocation.getCurrentPosition(
 				function onSuccess(position){
 					mapbox.setCenter([position.coords.longitude, position.coords.latitude]);
 					new mapboxgl.Marker({
@@ -53,7 +54,7 @@ class Map extends React.Component {
 					maximumAge: 0
 				}
 			);
-			
+		
 			//other places
 			data.forEach((place, i) =>{
 				var el = document.createElement('div')

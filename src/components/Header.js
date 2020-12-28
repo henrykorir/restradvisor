@@ -3,10 +3,10 @@ import RatingsFilter from '../components/RatingsFilter';
 class Header extends React.Component{
 	render(){
 		return(
-			<div className="heading">
+			<header className="heading">
 				<RatingsFilter onFilter={this.props.onFilter}/>
-				
-			</div>
+				<h1>Restradvisor</h1>
+			</header>
 		);
 	}
 }
