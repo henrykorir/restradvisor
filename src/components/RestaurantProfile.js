@@ -1,5 +1,6 @@
 import React from 'react';
 import StarGroup from '../components/StarGroup';
+import getAverageRating from '../helper/getAverageRating';
 
 class RestaurantProfile extends React.Component{
 	constructor(props){
@@ -11,6 +12,7 @@ class RestaurantProfile extends React.Component{
 	}
 	
 	render(){
+		let averageRating = getAverageRating(this.props.record.ratings);
 		let latlng = this.props.record.lat + "," + this.props.record.long;
 		let photo_url = "https://maps.googleapis.com/maps/api/streetview?size=400x400&location="+latlng+"&fov=80&heading=70&pitch=0&key=AIzaSyDEehuutoA7e5pBBvhSgJ3n_PQdpHIVYtY"
 		return(
@@ -22,7 +24,7 @@ class RestaurantProfile extends React.Component{
 					<p>{this.props.record.address}</p>
 				</div>
 				<div className="rating">
-					<StarGroup stars={this.props.record.ratings.length % 5} />
+					<StarGroup stars={averageRating} />
 					<span style={{fontWeight: "bold"}}>
 						{ this.props.record.ratings.length > 9 ?  " 9+ Reviews" : this.props.record.ratings.length + " Reviews" }
 					</span>

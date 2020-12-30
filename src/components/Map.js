@@ -14,7 +14,7 @@ class Map extends React.Component {
 				return { lat: this.props.here.lat, lng: this.props.here.lng };
 			});
 		}
-		this.state.map.flyTo({center:[this.state.lng, this.state.lat],zoom: 15});
+		this.state.map.flyTo({center:[this.state.lng, this.state.lat],zoom: 17});
 	}
 	componentDidMount(){
 		let data = this.props.data;

@@ -21,7 +21,6 @@ class RatingsFilter extends React.Component{
 		let value = event.target.value;
 		let value1 = this.state.firstValue;
 		let value2 = this.state.secondValue;
-		console.log(event.target.id);
 		if(event.target.id === "a")
 			value1 = value;
 		else

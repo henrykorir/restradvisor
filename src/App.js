@@ -4,24 +4,27 @@ import Map from './components/Map';
 import DetailsTab from './components/DetailsTab';
 import useCurrentLocation from './helper/useCurrentLocation';
 import information from './database/data.json';
+import getAverageRating from './helper/getAverageRating';
 import './App.css';
+//https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=36.8377856,-1.2681216&radius=1500&type=restaurant&key=AIzaSyDEehuutoA7e5pBBvhSgJ3n_PQdpHIVYtY [key=AIzaSyDEehuutoA7e5pBBvhSgJ3n_PQdpHIVYtY]
+//paxful key=AIzaSyDEehuutoA7e5pBBvhSgJ3n_PQdpHIVYtY
+//key=AIzaSyA8CgnGnHEkyeweyqk-Abf-BjhRb_j2o90
 
 const geolocationOptions = {
 	enableHighAccuracy: true,
 	timeout: Infinity,
 	maximumAge: 0
 };
+
 function App() {
 	const { location: currentLocation, error: currentError } = useCurrentLocation(geolocationOptions);
-	const [here, setHere] = useState({lng: 0, lat: 0});
+	const [here, setHere] = useState({lng: 151.215, lat: -33.856});
 	const [places, handleData] = useState(information);
 	const [min, setMin] = useState(1);
     const [max, setMax] = useState(5);
-	console.log(currentLocation);
 	const changeLocation = (coords) => {
         setHere(coords);
     };
-	
 	const handleFilter =(a, b) =>{
 		const min = Math.min(a,b);
 		const max = Math.max(a,b);
@@ -30,34 +33,51 @@ function App() {
 	};
 	 useEffect(() => {
         let filteredData = information;
-		filteredData = filteredData.filter((place) =>((place.ratings.length >=min) && (place.ratings.length <= max)));
+		filteredData = filteredData.filter((place) =>((getAverageRating(place.ratings)>=min) && (getAverageRating(place.ratings) <= max)));
 		handleData(filteredData);
     }, [min, max]);
+	
 	useEffect(() =>{
-		console.log("info[]",information);
-		let url = "https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJN1t_tDeuEmsRUsoyG83frY4&fields=name,geometry,rating,reviews&key=AIzaSyDEehuutoA7e5pBBvhSgJ3n_PQdpHIVYtY";
-		/*async function fetchPlaces(initData, url){
-			try{
-			const response = fetch(url,{method: "get",mode:"no-cors"});
-			const fetchedPlaces = await response.json();
-			console.log(response.json());
-			//console.log(fetchedPlaces);
-			}catch(error){
-				console.log(error);
+		navigator.geolocation.getCurrentPosition(
+			function(position){
+				let nearby_url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + position.coords.latitude +","+position.coords.longitude+"&radius=1500&type=restaurant&key=AIzaSyDEehuutoA7e5pBBvhSgJ3n_PQdpHIVYtY";
+				fetch(nearby_url)
+				.then(nearbyResponse => nearbyResponse.json())
+				.then(nearbyPlaces =>{
+							
+					nearbyPlaces.results.forEach((place, i) =>{
+						let place_url = "https://maps.googleapis.com/maps/api/place/details/json?place_id="+place.place_id+"&fields=name,formatted_address,geometry,rating,reviews&key=AIzaSyDEehuutoA7e5pBBvhSgJ3n_PQdpHIVYtY";
+						//let newData = information;
+						return fetch(place_url)
+						.then(response => response.json())
+						.then(data => {
+							let reviews = [];
+							if(data.result.reviews !== undefined){
+								for(let review of data.result.reviews){
+									reviews.push({stars: review.rating, comment: review.text});
+								}
+							}
+							information.push({
+								restaurantName: data.result.name,
+								address: data.result.formatted_address,
+								lat: data.result.geometry.location.lat,
+								long: data.result.geometry.location.lng,
+								ratings: reviews
+							})
+							//console.log(newData);
+							handleData(information);
+						})
+						.catch(err => console.log(err));
+					});
+					
+				})
+				.catch(error => console.log(error));
+			},
+			function(){
+				console.log("Error retriving location");
 			}
-		}
-		fetchPlaces(information, url);
-		*/
-		fetch(url,{method: "get",mode:"no-cors"})
-		.then((response)=>{
-			return response.json();
-		})
-		.then((data)=>{
-			console.log(data);
-		})
-		.catch((error)=>{
-			console.log(error);
-		});
+		);
+		
 	},[]);
 	return (
 		<div>

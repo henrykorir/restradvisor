@@ -1,3 +1,10 @@
+AR = 1*a+2*b+3*c+4*d+5*e/5
+Where AR is the average rating
+a is the number of 1 star ratings
+b is the number of 2 star ratings
+c is the number of 3 star ratings
+d is the number of 4 star ratings
+e is the number of 5 star ratings
 {
    "html_attributions" : [],
    "next_page_token" : "ATtYBwJEFbD1MgaKjZfuv-MyHsDAp1UYXNAJRtjNxaR4eebkpZCWB_y9tyQq8wZZ3-Q_a3Ej7Vfm23vVqH2jThQRQAqkCLJaPxPdxMbBhgFzTd4dH--Kr2WBCt9olMycwBI4JSxKMmyXfoZk0gDij9miyz1wSOpBTrUZaZ1P36N9a5hg9ft1Rrs0TQ0IPaZtE_RKTDa7d8u5Htl6ZTQafoLmkaCECSU2U1OWXXfcMyL5hPGS01C8CcOk3armajZQfZMjYHG6aP3vkrh8Qw7ShRsdnMw98grgbxMoq_7jUqlNsOW8xX3DqbL3Y6ppqrzdNEAxqH-g6K9inr-3cnurCuwge06ofLu_DiPnzk968Xd8dNEvONu6DqbOLsbxob5rj6QoYROiOaSIAXmo3b58oMYXqJ5WImTc1gCd5WLel6qf5I_e66IZnDPjNaXjE89Z",
