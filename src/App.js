@@ -2,19 +2,19 @@ import React, { useState, useEffect} from 'react';
 import Header from './components/Header';
 import Map from './components/Map';
 import DetailsTab from './components/DetailsTab';
-import useCurrentLocation from './helper/useCurrentLocation';
+//import useCurrentLocation from './helper/useCurrentLocation';
 import information from './database/data.json';
 import getAverageRating from './helper/getAverageRating';
 import './App.css';
 //paxful key=AIzaSyDEehuutoA7e5pBBvhSgJ3n_PQdpHIVYtY
 //key=AIzaSyA8CgnGnHEkyeweyqk-Abf-BjhRb_j2o90
-
+/*
 const geolocationOptions = {
 	enableHighAccuracy: true,
 	timeout: Infinity,
 	maximumAge: 0
 };
-
+*/
 function App() {
 	//const { location: currentLocation, error: currentError } = useCurrentLocation(geolocationOptions);
 	const [here, setHere] = useState({lng: 151.215, lat: -33.856});
