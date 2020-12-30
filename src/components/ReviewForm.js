@@ -1,5 +1,5 @@
 import React from 'react';
-import StarGroup from '../components/StarGroup';
+//import StarGroup from '../components/StarGroup';
 
 class ReviewForm extends React.Component{
 	constructor(props){

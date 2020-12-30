@@ -23,8 +23,7 @@ const getAverageRating = (ratings) =>{
 				rating[4][1] += 1;
 		}
 	}
-	let count = 0;
-	let product = 0;
+	let count = 0, product = 0;
 	for(let i in rating){
 		count = count + rating[i][1];
 		product = product + (rating[i][0] * rating[i][1]);

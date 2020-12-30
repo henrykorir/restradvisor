@@ -79,7 +79,7 @@ function App() {
 				.catch(error => console.log(error));
 			},
 			function(){
-				console.log("Error retriving location");
+				alert("Error retriving location");
 			}
 		);
 		

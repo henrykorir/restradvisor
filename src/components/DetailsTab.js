@@ -34,6 +34,8 @@ class DetailsTab extends React.Component{
 			case 3:
 				tab = <ReviewForm onClick ={ this.handleClick }/>;
 				break;
+			default:
+				break;
 		}
 		return(
 			<aside className="sidebar">

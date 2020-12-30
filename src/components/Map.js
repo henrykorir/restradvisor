@@ -1,6 +1,6 @@
 import React from 'react';
 import mapboxgl from 'mapbox-gl';
-//https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-1.2713984,36.8345088&radius=500&types=food&name=restaurant&key=AIzaSyAc4BNBe7d1RKp4fHs1NSt3mc2DD4Z89jU
+
 mapboxgl.accessToken = 'pk.eyJ1IjoiaGVucnlrb3JpciIsImEiOiJja2lpaWJybTMyNXRhMnhvNTJkZGkwdHVuIn0.vGU67gSoCtqbxrV6kudGcw';
 class Map extends React.Component {
 	constructor(props){
@@ -9,7 +9,6 @@ class Map extends React.Component {
 	}
 	componentDidUpdate(prevProps) {
 		if (JSON.stringify(this.props.here) !== JSON.stringify(prevProps.here)) {
-			const here = this.props.here;
 			this.setState((state) =>{
 				return { lat: this.props.here.lat, lng: this.props.here.lng };
 			});
@@ -68,7 +67,7 @@ class Map extends React.Component {
 		.addControl(new mapboxgl.NavigationControl(), 'top-left')
 		.on('click', (e)=>{
 			console.log(e.lngLat);
-			var popup = new mapboxgl.Popup({
+			new mapboxgl.Popup({
 				closeButton: true,
 				closeOnClick: true
 			})
