@@ -16,7 +16,7 @@ const geolocationOptions = {
 };
 
 function App() {
-	const { location: currentLocation, error: currentError } = useCurrentLocation(geolocationOptions);
+	//const { location: currentLocation, error: currentError } = useCurrentLocation(geolocationOptions);
 	const [here, setHere] = useState({lng: 151.215, lat: -33.856});
 	const [places, handleData] = useState(information);
 	const [min, setMin] = useState(1);
