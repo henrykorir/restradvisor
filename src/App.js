@@ -6,7 +6,6 @@ import useCurrentLocation from './helper/useCurrentLocation';
 import information from './database/data.json';
 import getAverageRating from './helper/getAverageRating';
 import './App.css';
-//https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=36.8377856,-1.2681216&radius=1500&type=restaurant&key=AIzaSyDEehuutoA7e5pBBvhSgJ3n_PQdpHIVYtY [key=AIzaSyDEehuutoA7e5pBBvhSgJ3n_PQdpHIVYtY]
 //paxful key=AIzaSyDEehuutoA7e5pBBvhSgJ3n_PQdpHIVYtY
 //key=AIzaSyA8CgnGnHEkyeweyqk-Abf-BjhRb_j2o90
 
@@ -31,9 +30,15 @@ function App() {
 		setMin(min);
 		setMax(max);
 	};
-	 useEffect(() => {
+	useEffect(() =>{
+		information.forEach((place,i) =>{
+			place.averageRating = getAverageRating(place.ratings);
+		});
+		handleData(information);
+	},[]);
+	useEffect(() => {
         let filteredData = information;
-		filteredData = filteredData.filter((place) =>((getAverageRating(place.ratings)>=min) && (getAverageRating(place.ratings) <= max)));
+		filteredData = filteredData.filter((place) =>((place.averageRating >= min) && (place.averageRating <= max)));
 		handleData(filteredData);
     }, [min, max]);
 	
@@ -47,7 +52,6 @@ function App() {
 							
 					nearbyPlaces.results.forEach((place, i) =>{
 						let place_url = "https://maps.googleapis.com/maps/api/place/details/json?place_id="+place.place_id+"&fields=name,formatted_address,geometry,rating,reviews&key=AIzaSyDEehuutoA7e5pBBvhSgJ3n_PQdpHIVYtY";
-						//let newData = information;
 						return fetch(place_url)
 						.then(response => response.json())
 						.then(data => {
@@ -57,14 +61,15 @@ function App() {
 									reviews.push({stars: review.rating, comment: review.text});
 								}
 							}
+							let rate = data.result.rating === undefined ? 1 : Math.trunc(data.result.rating); 
 							information.push({
 								restaurantName: data.result.name,
 								address: data.result.formatted_address,
 								lat: data.result.geometry.location.lat,
 								long: data.result.geometry.location.lng,
-								ratings: reviews
-							})
-							//console.log(newData);
+								ratings: reviews,
+								averageRating: rate
+							});
 							handleData(information);
 						})
 						.catch(err => console.log(err));

@@ -12,7 +12,7 @@ class RestaurantProfile extends React.Component{
 	}
 	
 	render(){
-		let averageRating = getAverageRating(this.props.record.ratings);
+		console.log(this.props.record.averageRating);
 		let latlng = this.props.record.lat + "," + this.props.record.long;
 		let photo_url = "https://maps.googleapis.com/maps/api/streetview?size=400x400&location="+latlng+"&fov=80&heading=70&pitch=0&key=AIzaSyDEehuutoA7e5pBBvhSgJ3n_PQdpHIVYtY"
 		return(
@@ -24,7 +24,7 @@ class RestaurantProfile extends React.Component{
 					<p>{this.props.record.address}</p>
 				</div>
 				<div className="rating">
-					<StarGroup stars={averageRating} />
+					<StarGroup stars={this.props.record.averageRating} />
 					<span style={{fontWeight: "bold"}}>
 						{ this.props.record.ratings.length > 9 ?  " 9+ Reviews" : this.props.record.ratings.length + " Reviews" }
 					</span>
