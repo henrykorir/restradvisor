@@ -7,7 +7,7 @@ class DetailsTab extends React.Component{
 		super(props);
 		this.state = {
 			status: 1,
-			record: props.placesData[0],
+			record: props.data[0],
 		}
 		this.handleClick = this.handleClick.bind(this);
 	}
@@ -21,7 +21,7 @@ class DetailsTab extends React.Component{
 		let tab;
 		switch(this.state.status){
 			case 1:
-				tab = this.props.placesData.map((info,i) =>
+				tab = this.props.data.map((info,i) =>
 						<li key={i.toString()}>
 							<RestaurantProfile record = { info } onClick={ this.handleClick }/>
 						</li>

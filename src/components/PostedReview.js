@@ -11,9 +11,26 @@ class PostedReview extends React.Component{
 		this.props.onClick({choice: 1, record: this.props.record});
 	}
 	render(){
+		function verdict(stars){
+			let meaning = "Terrible";
+			if(stars === 1)
+				meaning = "Terrible";
+			if(stars === 2)
+				meaning = "Poor";
+			else if(stars === 3)
+				meaning = "Average";
+			else if(stars === 4)
+				meaning = "Good";
+			else
+				meaning = "Excellent";
+			return meaning;
+		}
 		const reviews = this.props.record.ratings.map((review, i) =>
 			<li key ={i.toString()}>
-				<StarGroup stars={review.stars}/>
+				<div style={{"display":"flex", "flexDirection":"row"}}>
+					<StarGroup stars={review.stars}/>
+					<span style={{"margingLeft":".5em","fontWeight":"bold"}}>{verdict(review.stars)}</span>
+				</div>
 				<p>{review.comment}</p>
 			</li>
 		);

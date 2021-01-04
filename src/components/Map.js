@@ -5,7 +5,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiaGVucnlrb3JpciIsImEiOiJja2lpaWJybTMyNXRhMnhvN
 class Map extends React.Component {
 	constructor(props){
 		super(props);
-		this.state = { map: null, lat:0, lng: 0 };
+		this.state = { map: null, lat:48.874753533091024, lng: 2.350500092306703};
+		this.handleClick = this.handleClick.bind(this);
 	}
 	componentDidUpdate(prevProps) {
 		if (JSON.stringify(this.props.here) !== JSON.stringify(prevProps.here)) {
@@ -19,6 +20,7 @@ class Map extends React.Component {
 		let data = this.props.data;
 		let lat = this.props.here.lat;
 		let lng = this.props.here.lng;
+		let html = '<form><input type="text" id="name"/> <input type="submit" />';
 		const mapbox = new mapboxgl.Map({
 			center: [lng, lat],
 			container: 'mapContainer',
@@ -27,8 +29,7 @@ class Map extends React.Component {
 		})
 		.on('load', function(e) {
 			//my location
-			const { geolocation } = navigator;
-			geolocation.getCurrentPosition(
+			navigator.geolocation.getCurrentPosition(
 				function onSuccess(position){
 					mapbox.setCenter([position.coords.longitude, position.coords.latitude]);
 					new mapboxgl.Marker({
@@ -66,18 +67,41 @@ class Map extends React.Component {
 		})
 		.addControl(new mapboxgl.NavigationControl(), 'top-left')
 		.on('click', (e)=>{
-			console.log(e.lngLat);
-			new mapboxgl.Popup({
+			let lnglat = e.lngLat;
+			const popup = new mapboxgl.Popup({
 				closeButton: true,
 				closeOnClick: true
 			})
 			.setLngLat( [e.lngLat.lng,  e.lngLat.lat])
-			.setHTML("<p><form><input type=\"text\" /> <input type=\"submit\" /></p>")
-			.addTo(mapbox);;
+			.setHTML(html)
+			.addTo(mapbox);
+			const inputForm = document.querySelector('form');
+			inputForm.addEventListener('submit',(e) =>{
+				e.preventDefault();
+				e.stopPropagation();
+				let place = {
+					restaurantName:e.target[0].value,
+					address: "52 ave street",
+					averageRating: 1,
+					lat: lnglat.lat,
+					long: lnglat.lng,
+					ratings:[
+						{
+							stars: 1,
+							comment: "Just stumbled on it"
+						},
+					],
+				};
+				this.handleClick(place);
+				popup.remove();
+			},true);
 		})
 		this.setState((state) =>{
 			return { map: mapbox, };
 		});
+	}
+	handleClick(place){
+		this.props.addPlace(place);
 	}
 	render() {
 		return (

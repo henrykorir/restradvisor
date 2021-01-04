@@ -2,25 +2,18 @@ import React, { useState, useEffect} from 'react';
 import Header from './components/Header';
 import Map from './components/Map';
 import DetailsTab from './components/DetailsTab';
-//import useCurrentLocation from './helper/useCurrentLocation';
 import information from './database/data.json';
 import getAverageRating from './helper/getAverageRating';
 import './App.css';
 //paxful key=AIzaSyDEehuutoA7e5pBBvhSgJ3n_PQdpHIVYtY
 //key=AIzaSyA8CgnGnHEkyeweyqk-Abf-BjhRb_j2o90
-/*
-const geolocationOptions = {
-	enableHighAccuracy: true,
-	timeout: Infinity,
-	maximumAge: 0
-};
-*/
+
 function App() {
-	//const { location: currentLocation, error: currentError } = useCurrentLocation(geolocationOptions);
 	const [here, setHere] = useState({lng: 151.215, lat: -33.856});
-	const [places, handleData] = useState(information);
+	const [data, setData] = useState(information);
 	const [min, setMin] = useState(1);
     const [max, setMax] = useState(5);
+
 	const changeLocation = (coords) => {
         setHere(coords);
     };
@@ -30,21 +23,26 @@ function App() {
 		setMin(min);
 		setMax(max);
 	};
+	const addANewPlace = (newPlace) =>{
+		data.push(newPlace);
+		setData(data);
+	}
 	useEffect(() =>{
 		information.forEach((place,i) =>{
 			place.averageRating = getAverageRating(place.ratings);
 		});
-		handleData(information);
+		setData(information);
 	},[]);
 	useEffect(() => {
         let filteredData = information;
 		filteredData = filteredData.filter((place) =>((place.averageRating >= min) && (place.averageRating <= max)));
-		handleData(filteredData);
+		setData(filteredData);
     }, [min, max]);
 	
 	useEffect(() =>{
 		navigator.geolocation.getCurrentPosition(
-			function(position){
+			(position) => {
+				setHere({lng: position.coords.longitude, lat: position.coords.latitude});
 				let nearby_url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + position.coords.latitude +","+position.coords.longitude+"&radius=1500&type=restaurant&key=AIzaSyDEehuutoA7e5pBBvhSgJ3n_PQdpHIVYtY";
 				fetch(nearby_url)
 				.then(nearbyResponse => nearbyResponse.json())
@@ -70,7 +68,7 @@ function App() {
 								ratings: reviews,
 								averageRating: rate
 							});
-							handleData(information);
+							setData(information);
 						})
 						.catch(err => console.log(err));
 					});
@@ -78,18 +76,19 @@ function App() {
 				})
 				.catch(error => console.log(error));
 			},
-			function(){
+			() =>{
 				alert("Error retriving location");
 			}
 		);
 		
 	},[]);
+	
 	return (
-		<div>
+		<>
 			<Header onFilter={handleFilter} />
-			<Map  data = {information}  here = {here}/>
-			<DetailsTab  onShowHere={changeLocation} placesData = {places} />
-		</div>
+			<Map  data = {data}  here = {here} addPlace = {addANewPlace}/>
+			<DetailsTab  onShowHere={changeLocation} data = {data} />
+		</>
 	);
 }
 export default App;
