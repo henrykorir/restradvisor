@@ -1,6 +1,7 @@
 import React from 'react';
 import mapboxgl from 'mapbox-gl';
-
+import PlaceForm from '../helper/constants';
+console.log(PlaceForm);
 mapboxgl.accessToken = 'pk.eyJ1IjoiaGVucnlrb3JpciIsImEiOiJja2lpaWJybTMyNXRhMnhvNTJkZGkwdHVuIn0.vGU67gSoCtqbxrV6kudGcw';
 class Map extends React.Component {
 	constructor(props){
@@ -73,12 +74,15 @@ class Map extends React.Component {
 				closeOnClick: true
 			})
 			.setLngLat( [e.lngLat.lng,  e.lngLat.lat])
-			.setHTML(html)
+			.setHTML(PlaceForm)
 			.addTo(mapbox);
 			const inputForm = document.querySelector('form');
+			
 			inputForm.addEventListener('submit',(e) =>{
 				e.preventDefault();
 				e.stopPropagation();
+				let frm = new FormData(inputForm);
+				console.log(frm);
 				let place = {
 					restaurantName:e.target[0].value,
 					address: "52 ave street",
@@ -94,6 +98,7 @@ class Map extends React.Component {
 				};
 				this.handleClick(place);
 				popup.remove();
+				
 			},true);
 		})
 		this.setState((state) =>{
