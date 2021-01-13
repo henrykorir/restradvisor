@@ -1,7 +1,7 @@
 import React from 'react';
 import mapboxgl from 'mapbox-gl';
 import PlaceForm from '../helper/constants';
-console.log(PlaceForm);
+
 mapboxgl.accessToken = 'pk.eyJ1IjoiaGVucnlrb3JpciIsImEiOiJja2lpaWJybTMyNXRhMnhvNTJkZGkwdHVuIn0.vGU67gSoCtqbxrV6kudGcw';
 class Map extends React.Component {
 	constructor(props){
@@ -10,6 +10,7 @@ class Map extends React.Component {
 		this.handleClick = this.handleClick.bind(this);
 	}
 	componentDidUpdate(prevProps) {
+		console.log(prevProps, this.props);
 		if (JSON.stringify(this.props.here) !== JSON.stringify(prevProps.here)) {
 			this.setState((state) =>{
 				return { lat: this.props.here.lat, lng: this.props.here.lng };
@@ -21,7 +22,7 @@ class Map extends React.Component {
 		let data = this.props.data;
 		let lat = this.props.here.lat;
 		let lng = this.props.here.lng;
-		let html = '<form><input type="text" id="name"/> <input type="submit" />';
+		
 		const mapbox = new mapboxgl.Map({
 			center: [lng, lat],
 			container: 'mapContainer',
@@ -81,21 +82,21 @@ class Map extends React.Component {
 			inputForm.addEventListener('submit',(e) =>{
 				e.preventDefault();
 				e.stopPropagation();
-				let frm = new FormData(inputForm);
-				console.log(frm);
+			
 				let place = {
 					restaurantName:e.target[0].value,
-					address: "52 ave street",
+					address: e.target[1].value === ""? "52 ave street":e.target[1].value,
 					averageRating: 1,
 					lat: lnglat.lat,
 					long: lnglat.lng,
 					ratings:[
 						{
-							stars: 1,
-							comment: "Just stumbled on it"
+							stars: e.target[3].value === "" ? "Just stumbled on it" : e.target[3].value, 
+							comment: e.target[2].value === "" ? 1 : e.target[2].value,
 						},
 					],
 				};
+				console.log(place);
 				this.handleClick(place);
 				popup.remove();
 				

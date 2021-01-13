@@ -5,6 +5,7 @@ import DetailsTab from './components/DetailsTab';
 import information from './database/data.json';
 import getAverageRating from './helper/getAverageRating';
 import './App.css';
+
 //paxful key=AIzaSyDEehuutoA7e5pBBvhSgJ3n_PQdpHIVYtY
 //key=AIzaSyA8CgnGnHEkyeweyqk-Abf-BjhRb_j2o90
 
@@ -24,8 +25,8 @@ function App() {
 		setMax(max);
 	};
 	const addANewPlace = (newPlace) =>{
-		data.push(newPlace);
-		setData(data);
+		information.push(newPlace);
+		setData(information);
 	}
 	useEffect(() =>{
 		information.forEach((place,i) =>{
@@ -81,7 +82,7 @@ function App() {
 			}
 		);
 		
-	},[]);
+	},[data]);
 	
 	return (
 		<>
