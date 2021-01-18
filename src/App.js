@@ -14,6 +14,19 @@ function App() {
 	const [data, setData] = useState(information);
 	const [min, setMin] = useState(1);
     const [max, setMax] = useState(5);
+    const [place, setPlace] = useState({
+					restaurantName:"here",
+					address:  "52 ave street",
+					averageRating: 1,
+					lat: -33.856,
+					long: 151.215,
+					ratings:[
+						{
+							stars: 1,
+							comment: "Just stumbled on it",
+						},
+					],
+				});
 
 	const changeLocation = (coords) => {
         setHere(coords);
@@ -25,9 +38,12 @@ function App() {
 		setMax(max);
 	};
 	const addANewPlace = (newPlace) =>{
-		information.push(newPlace);
-		setData(information);
+		setPlace(newPlace);
 	}
+	useEffect(()=>{
+		data.push(place);
+		//setData(place);
+	},[data,place]);
 	useEffect(() =>{
 		information.forEach((place,i) =>{
 			place.averageRating = getAverageRating(place.ratings);
