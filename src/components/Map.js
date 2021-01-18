@@ -10,7 +10,7 @@ class Map extends React.Component {
 		this.handleClick = this.handleClick.bind(this);
 	}
 	componentDidUpdate(prevProps) {
-		console.log(prevProps, this.props);
+		//console.log(prevProps.data, this.props.data);
 		if (JSON.stringify(this.props.here) !== JSON.stringify(prevProps.here)) {
 			this.setState((state) =>{
 				return { lat: this.props.here.lat, lng: this.props.here.lng };
@@ -22,7 +22,7 @@ class Map extends React.Component {
 		let data = this.props.data;
 		let lat = this.props.here.lat;
 		let lng = this.props.here.lng;
-		
+		console.log(data);
 		const mapbox = new mapboxgl.Map({
 			center: [lng, lat],
 			container: 'mapContainer',
@@ -80,9 +80,6 @@ class Map extends React.Component {
 			const inputForm = document.querySelector('form');
 			
 			inputForm.addEventListener('submit',(e) =>{
-				e.preventDefault();
-				e.stopPropagation();
-			
 				let place = {
 					restaurantName:e.target[0].value,
 					address: e.target[1].value === ""? "52 ave street":e.target[1].value,
@@ -96,9 +93,9 @@ class Map extends React.Component {
 						},
 					],
 				};
-				console.log(place);
 				this.handleClick(place);
 				popup.remove();
+				e.preventDefault();
 				
 			},true);
 		})
