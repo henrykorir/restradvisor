@@ -20,5 +20,5 @@ const PlaceForm =` <form id="popupForm">
     </select>
   
     <input type="submit" value="Submit">
-  </form>;`;
+  </form>`;
 export default PlaceForm;
