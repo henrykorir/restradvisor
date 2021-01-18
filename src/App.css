@@ -50,31 +50,10 @@ label{
     border-radius:0;
 }
 .review{
-	border: 4px solid red;
+	
 	padding-bottom: 25px;
 }
-/*
-form{
-	display: block;
-	width: 100%;
-	padding: 1em;
-}
-input[type="submit"]{
-	display: block;
-	background: black;
-	color: #fff;
-	width: 100%;
-	padding-top: .5em;
-	padding-bottom: .5em;
-	border-radius: 10px;
-	border: none;
-}
 
-input {
-  box-shadow: 0;
-  outline: 0;
-}
-*/
 .range-slider {
   width: 300px;
   margin: auto;
@@ -196,14 +175,32 @@ textarea{
 	background-image: url(./images/marker.png);
 	background-color: rgba(0, 0, 0, 0);
 }
+/*
 ul{
 	display: block;
-	margin: auto;
+	/*margin: .5em;*
 	padding: none;
 }
+*/
 li{
 	text-decoration:none;
 	list-style: none;
+}
+li p {
+    margin: 0;
+    padding: 0;
+	padding-bottom: .5em;
+}
+fieldset{
+	padding-top: 0;
+}
+.fixed{
+	/*
+	position: fixed;
+	opacity: 1;
+	z-index: 5;
+	margin-top: -1;
+	*/
 }
 .profile{
 	display: block;
@@ -239,12 +236,29 @@ li{
 	font-size: 16px;
 	cursor: pointer;
 }
-.fa-star:hover ~ .fa-star:after{
-	color: #098015;
+.star--container{
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-around;
+}
+.star--container .fa-star{
+	font-size: 24px;
+}
+form  i:hover:before,
+form  i:hover ~ i:before{
+	color: #098015;			
+}
+label:hover,label:hover ~ label {
+	color: orange;
+}
+input[type="radio"]:checked ~ label {
+  color: orange;
 }
 .rating{
 	display: flex;
 	justify-content: space-between;
+	pointer-events: none;
+	cursor: none;
 }
 
 #popupForm input[type=text], 
@@ -273,6 +287,6 @@ li{
 #popupForm  input[type=submit]:hover {
   background-color: #45a049;
 }
-textarea{
+#popupForm textarea{
 	text-align: left;
 }
