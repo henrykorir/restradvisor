@@ -11,10 +11,12 @@ class RestaurantProfile extends React.Component{
 	}
 	
 	render(){
+		let profile_style =  this.props.fixed === true ? "profile fixed" : "profile";
 		let latlng = this.props.record.lat + "," + this.props.record.long;
 		let photo_url = "https://maps.googleapis.com/maps/api/streetview?size=400x400&location="+latlng+"&fov=80&heading=70&pitch=0&key=AIzaSyDEehuutoA7e5pBBvhSgJ3n_PQdpHIVYtY"
+		
 		return(
-			<div className="profile" onClick={this.handleClick}>
+			<div className={ profile_style } onClick={this.handleClick}>
 				<div>
 					<img src={photo_url} alt="restraunt street view"/>
 					<h2>{this.props.record.restaurantName}</h2>
