@@ -6,15 +6,16 @@ class StarGroup extends React.Component{
 		const stars = [];
 		let i = 1;
 		for(;i<= this.props.stars; i++){
-			stars.push(<Star key = {i.toString()} status="checked" />);
+			stars.unshift(<Star key = {i.toString()} onRating={this.props.onRating} status="checked" />);
 		}
 		if(this.props.stars < 5){
 			for(;i<= 5; i++){
-				stars.push(<Star key = {i.toString()} />);
+				stars.unshift(<Star key = {i.toString()} onRating={this.props.onRating} />);
 			}
 		}
+		
 		return(
-			<span>
+			<span className="star--container">
 				{ stars }
 			</span>
 		);
