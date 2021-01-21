@@ -248,12 +248,7 @@ form  i:hover:before,
 form  i:hover ~ i:before{
 	color: #098015;			
 }
-label:hover,label:hover ~ label {
-	color: orange;
-}
-input[type="radio"]:checked ~ label {
-  color: orange;
-}
+
 .rating{
 	display: flex;
 	justify-content: space-between;

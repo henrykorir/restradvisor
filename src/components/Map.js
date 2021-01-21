@@ -10,7 +10,16 @@ class Map extends React.Component {
 		this.handleClick = this.handleClick.bind(this);
 	}
 	componentDidUpdate(prevProps) {
-		//console.log(prevProps.data, this.props.data);
+		if(JSON.stringify(this.props.data) !== JSON.stringify(prevProps.data)){
+			const place = this.props.data[this.props.data.length-1];
+				let i = document.querySelectorAll('.marker').length;
+				var el = document.createElement('div')
+				el.className= 'marker' ;
+				el.id = i;
+			new mapboxgl.Marker(el, { offset: [0, -23] })
+					.setLngLat([place.long, place.lat])
+					.addTo(this.state.map);
+		}
 		if (JSON.stringify(this.props.here) !== JSON.stringify(prevProps.here)) {
 			this.setState((state) =>{
 				return { lat: this.props.here.lat, lng: this.props.here.lng };
@@ -22,7 +31,7 @@ class Map extends React.Component {
 		let data = this.props.data;
 		let lat = this.props.here.lat;
 		let lng = this.props.here.lng;
-		console.log(data);
+		
 		const mapbox = new mapboxgl.Map({
 			center: [lng, lat],
 			container: 'mapContainer',

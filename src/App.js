@@ -14,19 +14,6 @@ function App() {
 	const [data, setData] = useState(information);
 	const [min, setMin] = useState(1);
     const [max, setMax] = useState(5);
-    const [place, setPlace] = useState({
-					restaurantName:"here",
-					address:  "52 ave street",
-					averageRating: 1,
-					lat: -33.856,
-					long: 151.215,
-					ratings:[
-						{
-							stars: 1,
-							comment: "Just stumbled on it",
-						},
-					],
-				});
 
 	const changeLocation = (coords) => {
         setHere(coords);
@@ -38,12 +25,11 @@ function App() {
 		setMax(max);
 	};
 	const addANewPlace = (newPlace) =>{
-		setPlace(newPlace);
+		//data.push(newPlace);
+		let temp = [...data, newPlace];
+		setData(temp);
 	}
-	useEffect(()=>{
-		data.push(place);
-		//setData(place);
-	},[data,place]);
+	
 	useEffect(() =>{
 		information.forEach((place,i) =>{
 			place.averageRating = getAverageRating(place.ratings);
@@ -60,7 +46,7 @@ function App() {
 		navigator.geolocation.getCurrentPosition(
 			(position) => {
 				setHere({lng: position.coords.longitude, lat: position.coords.latitude});
-				let nearby_url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + position.coords.latitude +","+position.coords.longitude+"&radius=1500&type=restaurant&key=AIzaSyDEehuutoA7e5pBBvhSgJ3n_PQdpHIVYtY";
+				let nearby_url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + position.coords.latitude +","+position.coords.longitude+"&radius=100&type=restaurant&key=AIzaSyDEehuutoA7e5pBBvhSgJ3n_PQdpHIVYtY";
 				fetch(nearby_url)
 				.then(nearbyResponse => nearbyResponse.json())
 				.then(nearbyPlaces =>{
@@ -99,7 +85,7 @@ function App() {
 		);
 		
 	},[data]);
-	
+	console.log(data);
 	return (
 		<>
 			<Header onFilter={handleFilter} />

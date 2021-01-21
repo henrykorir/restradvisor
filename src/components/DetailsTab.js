@@ -12,6 +12,7 @@ class DetailsTab extends React.Component{
 		this.handleClick = this.handleClick.bind(this);
 		this.handleReview = this.handleReview.bind(this);
 	}
+	
 	handleClick(info){
 		this.setState(( state ) =>{
 			return { status: info.choice, record: info.record };
@@ -19,12 +20,12 @@ class DetailsTab extends React.Component{
 		this.props.onShowHere({lat: info.record.lat, lng: info.record.long});
 	}
 	handleReview(review){
-		console.log(review);
 		let record = this.state.record;
 		record.ratings.unshift(review);
 		this.setState({record: record});
 	}
 	render(){
+		console.log(this.props.data);
 		let tab;
 		switch(this.state.status){
 			case 1:
