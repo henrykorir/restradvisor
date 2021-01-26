@@ -182,6 +182,9 @@ ul{
 	padding: none;
 }
 */
+ul .star--container{
+	pointer-events: none;
+}
 li{
 	text-decoration:none;
 	list-style: none;
