@@ -38,8 +38,8 @@ class PostedReview extends React.Component{
 		return(
 			<div>
 				<RestaurantProfile record={this.props.record} fixed={true} onClick = {this.handleClick}/>
+				<ReviewForm onPostReview = {this.props.onPostReview}/>
 				<ul >
-					<ReviewForm onPostReview = {this.props.onPostReview}/>
 					{reviews}
 				</ul>
 			</div>
