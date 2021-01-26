@@ -6,9 +6,6 @@ import information from './database/data.json';
 import getAverageRating from './helper/getAverageRating';
 import './App.css';
 
-//paxful key=AIzaSyDEehuutoA7e5pBBvhSgJ3n_PQdpHIVYtY
-//key=AIzaSyA8CgnGnHEkyeweyqk-Abf-BjhRb_j2o90
-
 function App() {
 	const [here, setHere] = useState({lng: 151.215, lat: -33.856});
 	const [data, setData] = useState(information);
@@ -25,34 +22,35 @@ function App() {
 		setMax(max);
 	};
 	const addANewPlace = (newPlace) =>{
-		//data.push(newPlace);
 		let temp = [...data, newPlace];
 		setData(temp);
 	}
 	
 	useEffect(() =>{
-		information.forEach((place,i) =>{
+		data.forEach((place,i) =>{
 			place.averageRating = getAverageRating(place.ratings);
 		});
-		setData(information);
-	},[]);
+		console.log(data);
+		setData(data);
+	},[data]);
 	useEffect(() => {
-        let filteredData = information;
+        let filteredData = data;
 		filteredData = filteredData.filter((place) =>((place.averageRating >= min) && (place.averageRating <= max)));
 		setData(filteredData);
-    }, [min, max]);
+    }, [min, max, data]);
 	
 	useEffect(() =>{
+		console.log(data);
 		navigator.geolocation.getCurrentPosition(
 			(position) => {
 				setHere({lng: position.coords.longitude, lat: position.coords.latitude});
-				let nearby_url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + position.coords.latitude +","+position.coords.longitude+"&radius=100&type=restaurant&key=AIzaSyDEehuutoA7e5pBBvhSgJ3n_PQdpHIVYtY";
+				let nearby_url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + position.coords.latitude +","+position.coords.longitude+"&radius=1000&type=restaurant&key=AIzaSyA8CgnGnHEkyeweyqk-Abf-BjhRb_j2o90";
 				fetch(nearby_url)
 				.then(nearbyResponse => nearbyResponse.json())
 				.then(nearbyPlaces =>{
 							
 					nearbyPlaces.results.forEach((place, i) =>{
-						let place_url = "https://maps.googleapis.com/maps/api/place/details/json?place_id="+place.place_id+"&fields=name,formatted_address,geometry,rating,reviews&key=AIzaSyDEehuutoA7e5pBBvhSgJ3n_PQdpHIVYtY";
+						let place_url = "https://maps.googleapis.com/maps/api/place/details/json?place_id="+place.place_id+"&fields=name,formatted_address,geometry,rating,reviews&key=AIzaSyA8CgnGnHEkyeweyqk-Abf-BjhRb_j2o90";
 						return fetch(place_url)
 						.then(response => response.json())
 						.then(data => {
@@ -71,7 +69,8 @@ function App() {
 								ratings: reviews,
 								averageRating: rate
 							});
-							setData(information);
+							console.log(information);
+							
 						})
 						.catch(err => console.log(err));
 					});
@@ -83,9 +82,8 @@ function App() {
 				alert("Error retriving location");
 			}
 		);
-		
+		setData(information);
 	},[data]);
-	console.log(data);
 	return (
 		<>
 			<Header onFilter={handleFilter} />
