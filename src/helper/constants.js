@@ -6,9 +6,7 @@ const PlaceForm =` <form id="popupForm">
     <input type="text" id="address" name="address" placeholder="Address..">
 	
 	<label for="review">Review</label>
-    <textarea id="review" name="review">
-	comment...
-	</textarea>
+    <textarea id="review" name="review" placeHolder="comment..."></textarea>
 
     <label for="rating">Rating</label>
     <select id="rating" name="rating">
