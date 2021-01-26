@@ -11,14 +11,16 @@ class Map extends React.Component {
 	}
 	componentDidUpdate(prevProps) {
 		if(JSON.stringify(this.props.data) !== JSON.stringify(prevProps.data)){
-			const place = this.props.data[this.props.data.length-1];
+			if(this.props.data.length > 0){
+				const place = this.props.data[this.props.data.length-1];
 				let i = document.querySelectorAll('.marker').length;
-				var el = document.createElement('div')
+				let el = document.createElement('div')
 				el.className= 'marker' ;
 				el.id = i;
-			new mapboxgl.Marker(el, { offset: [0, -23] })
-					.setLngLat([place.long, place.lat])
-					.addTo(this.state.map);
+				new mapboxgl.Marker(el, { offset: [0, -23] })
+				.setLngLat([place.long, place.lat])
+				.addTo(this.state.map);
+			}
 		}
 		if (JSON.stringify(this.props.here) !== JSON.stringify(prevProps.here)) {
 			this.setState((state) =>{
@@ -68,7 +70,7 @@ class Map extends React.Component {
 		
 			//other places
 			data.forEach((place, i) =>{
-				var el = document.createElement('div')
+				let el = document.createElement('div')
 				el.className= 'marker' ;
 				el.id = i + 1;
 				new mapboxgl.Marker(el, { offset: [0, -23] })
@@ -106,7 +108,7 @@ class Map extends React.Component {
 				popup.remove();
 				e.preventDefault();
 				
-			},true);
+			});
 		})
 		this.setState((state) =>{
 			return { map: mapbox, };
