@@ -17,6 +17,7 @@ class RestaurantProfile extends React.Component{
 		
 		return(
 			<div className={ profile_style } onClick={this.handleClick}>
+				<span>back</span>
 				<div>
 					<img src={photo_url} alt="restraunt street view"/>
 					<h2>{this.props.record.restaurantName}</h2>
