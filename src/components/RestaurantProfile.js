@@ -14,10 +14,14 @@ class RestaurantProfile extends React.Component{
 		let profile_style =  this.props.fixed === true ? "profile fixed" : "profile";
 		let latlng = this.props.record.lat + "," + this.props.record.long;
 		let photo_url = "https://maps.googleapis.com/maps/api/streetview?size=400x400&location="+latlng+"&fov=80&heading=70&pitch=0&key=AIzaSyDEehuutoA7e5pBBvhSgJ3n_PQdpHIVYtY"
+		let back = this.props.view === 1 ? "" : <span style={{"float":"right"}}>back</span>;
+		let reviewInfo = null;
+		if( this.props.record.ratings.length !== undefined)
+		reviewInfo = this.props.record.ratings.length > 9 ?  " 9+ Reviews" : this.props.record.ratings.length + " Reviews" ;
 		
 		return(
 			<div className={ profile_style } onClick={this.handleClick}>
-				<span>back</span>
+				{ back }
 				<div>
 					<img src={photo_url} alt="restraunt street view"/>
 					<h2>{this.props.record.restaurantName}</h2>
@@ -27,7 +31,7 @@ class RestaurantProfile extends React.Component{
 					<span style={{"fontWeight":"bold"}}>{this.props.record.averageRating}</span>
 					<StarGroup stars={this.props.record.averageRating} />
 					<span style={{fontWeight: "bold"}}>
-						{ this.props.record.ratings.length > 9 ?  " 9+ Reviews" : this.props.record.ratings.length + " Reviews" }
+						{reviewInfo}
 					</span>
 				</div>
 			</div>
