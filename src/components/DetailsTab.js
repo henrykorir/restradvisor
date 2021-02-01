@@ -25,13 +25,12 @@ class DetailsTab extends React.Component{
 		this.setState({record: record});
 	}
 	render(){
-		console.log(this.props.data);
 		let tab;
 		switch(this.state.status){
 			case 1:
 				tab = this.props.data.map((info,i) =>
 						<li key={i.toString()}>
-							<RestaurantProfile record = { info } fixed={false}onClick={ this.handleClick }/>
+							<RestaurantProfile record = { info } fixed={false} view={1} onClick={ this.handleClick }/>
 						</li>
 					)
 				tab = <ul>{tab}</ul>;
