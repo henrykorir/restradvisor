@@ -59,15 +59,16 @@ function App() {
 		dispatch({type:'GET_AVERAGE_RATING', payload: temp});
 	},[state.originalData]);
 	useEffect(() =>{
+		const google_api_key = process.env.REACT_APP_GOOGLE_API_KEY;
 		navigator.geolocation.getCurrentPosition(
 			(position) => {
 				setHere({lng: position.coords.longitude, lat: position.coords.latitude});
-				let nearby_url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + position.coords.latitude +","+position.coords.longitude+"&radius=1000&type=restaurant&key=AIzaSyA8CgnGnHEkyeweyqk-Abf-BjhRb_j2o90";
+			let nearby_url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=` + position.coords.latitude +","+position.coords.longitude+`&radius=1000&type=restaurant&key=${google_api_key}`;
 				fetch(nearby_url)
 				.then(nearbyResponse => nearbyResponse.json())
 				.then(nearbyPlaces =>{
 					nearbyPlaces.results.forEach((place, i) =>{
-						let place_url = "https://maps.googleapis.com/maps/api/place/details/json?place_id="+place.place_id+"&fields=name,formatted_address,geometry,rating,reviews&key=AIzaSyA8CgnGnHEkyeweyqk-Abf-BjhRb_j2o90";
+					let place_url = "https://maps.googleapis.com/maps/api/place/details/json?place_id="+place.place_id+`&fields=name,formatted_address,geometry,rating,reviews&key=${google_api_key}`;
 						return fetch(place_url)
 						.then(response => response.json())
 						.then(resultData => {
