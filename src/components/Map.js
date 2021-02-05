@@ -2,7 +2,7 @@ import React from 'react';
 import mapboxgl from 'mapbox-gl';
 import PlaceForm from '../helper/constants';
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiaGVucnlrb3JpciIsImEiOiJja2lpaWJybTMyNXRhMnhvNTJkZGkwdHVuIn0.vGU67gSoCtqbxrV6kudGcw';
+mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_API_KEY;
 class Map extends React.Component {
 	constructor(props){
 		super(props);
