@@ -5,7 +5,7 @@ import DetailsTab from './components/DetailsTab';
 import information from './database/data.json';
 import getAverageRating from './helper/getAverageRating';
 import './App.css';
-console.log(process.env);
+console.log("google",process.env.REACT_APP_GOOGLE_API_KEY);
 const initialState = {
 	originalData: information,
 	data: information
