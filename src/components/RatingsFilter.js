@@ -35,13 +35,6 @@ class RatingsFilter extends React.Component{
 			<div className="range-slider">
 				<input id="a"  type="range" value={this.state.firstValue} min={this.state.minValue} max={this.state.maxValue} step={this.state.step}  list="ratings" onChange={this.handleChange.bind(this)}/>
 				<input id="b"  type="range" value={this.state.secondValue} min={this.state.minValue} max={this.state.maxValue} step={this.state.step}  list="ratings" onChange={this.handleChange.bind(this)}/>
-				  <datalist id="ratings">
-					<option value="1" label="1">1</option>
-					<option value="2" label="2">2</option>
-					<option value="3" label="3">3</option>
-					<option value="4" label="4">4</option>
-					<option value="5" label="5">5</option>
-				</datalist>
 			</div>
 		);
 	}
