@@ -6,16 +6,16 @@
 	left: 0;
 	right: 0;
 	width: 100%;
-    background: #24292e;
     background-color: black;/*#00853e;*/
     color: #fff;
 	text-align: center;
 	height:60px;
-	
 }
 .heading h1{
 	text-transform: capitalize;
-}
+	font-size: 16px;
+	float: right;
+}		
 label{
 	display: flex;
 	flex-direction: column;
@@ -50,18 +50,15 @@ label{
     border-radius:0;
 }
 .review{
-	
 	padding-bottom: 25px;
 }
 
 .range-slider {
-  width: 300px;
+  width: 12em;
   margin: auto;
-  text-align: center;
   position: relative;
-  height: 6em;
-  margin-top: 2em;
   color: #fff;
+  background: yellow;
 }
 .range-slider svg,
 .range-slider input[type=range] {
@@ -175,13 +172,7 @@ textarea{
 	background-image: url(./images/marker.png);
 	background-color: rgba(0, 0, 0, 0);
 }
-/*
-ul{
-	display: block;
-	/*margin: .5em;*
-	padding: none;
-}
-*/
+
 ul .star--container{
 	pointer-events: none;
 }
